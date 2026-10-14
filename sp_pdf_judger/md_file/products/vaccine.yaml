@@ -1,0 +1,30 @@
+product: vaccine
+
+tests:
+
+  무균시험:
+    type: numeric
+    unit: CFU/10mL
+    criteria: "0"
+    comparator: "=="
+    pass_condition: "equal"
+
+  마이코플라즈마부정시험:
+    type: numeric
+    unit: CFU/10mL
+    criteria: "0"
+    comparator: "=="
+
+  바이러스역가시험:
+    type: numeric
+    unit: log_LD40_per_mL
+    comparator: ">="
+    description: "값이 높을수록 적합"
+
+  확인시험:
+    type: text
+    pass_keywords:
+      - 적합
+
+rules:
+  prefer_text_result: true

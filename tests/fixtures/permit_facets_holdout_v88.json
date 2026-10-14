@@ -1,0 +1,76 @@
+{
+  "schema": "permit-facet-holdout-v1",
+  "purpose": "v87 MD 수정에 사용하지 않은 원문 12구간. 출력 의미 84개 중 명확한 78개 기대값만 고정한다. 모호한 경계 분류는 점수에서 제외한다.",
+  "permit_sha256": "0c153c31ca738dfbf6a2b752ea09fa8a8ea9badbae3466d870c6a2279e77f8d2",
+  "frozen_md_sha256": "598bd116347b58621b6ed88337cb168b8e1b1974a02b3d58945e5d3f5b3daf2c",
+  "v87_development_spans": ["S0001", "S0002", "S0003", "S0148", "S0151", "S0153", "S0154", "S0156", "S0158", "S0160", "S0162", "S0164", "S0166", "S0214", "S0259"],
+  "stage_path": ["제조방법 및 시험기준", "Component A 중간체 원액", "Component A 중간체 원액에 대한 시험"],
+  "cases": [
+    {
+      "span_ref": "S0021", "page": 3, "source_cue": "1. 정의",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "absent", "other": "present", "unclear": "absent"},
+      "evidence_all_groups": {"other": [["정의"]]}
+    },
+    {
+      "span_ref": "S0025", "page": 3, "source_cue": "이 원료의약품은",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "absent", "other": "present", "unclear": "absent"},
+      "evidence_all_groups": {"other": [["원료의약품", "사스 코로나바이러스"]]}
+    },
+    {
+      "span_ref": "S0031", "page": 3, "source_cue": "형질 주입",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "present", "test_obligation_candidate": "absent", "unclear": "absent"},
+      "evidence_all_groups": {"procedure": [["형질 주입"]]},
+      "excluded_reason": "제조 설명에 제품/유전자 정보도 섞였으므로 other 경계는 이 표본의 점수에서 제외."
+    },
+    {
+      "span_ref": "S0033", "page": 3, "source_cue": "-135℃",
+      "expected": {"common_condition": "present", "acceptance_criterion": "absent", "procedure": "present", "test_obligation_candidate": "absent", "other": "present", "unclear": "absent"},
+      "evidence_all_groups": {"common_condition": [["-135℃"], ["보관"]], "procedure": [["계대배양", "계대 배양"]], "other": [["5/60", "별첨규격"]]},
+      "excluded_reason": "읽기 순서상 붙은 별첨규격은 실제 페이지 상단 표제이므로 외부참조 여부는 점수에서 제외."
+    },
+    {
+      "span_ref": "S0122", "page": 10, "source_cue": "문서확인번호",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "absent", "other": "present", "unclear": "absent"},
+      "evidence_all_groups": {"other": [["문서확인번호", "- 8 -"]]}
+    },
+    {
+      "span_ref": "S0123", "page": 10, "source_cue": "미생물종확인시험",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "present", "unclear": "absent"},
+      "evidence_all_groups": {"test_obligation_candidate": [["미생물종확인시험"]]},
+      "excluded_reason": "시험 제목 자체의 other 중복 여부는 점수에서 제외."
+    },
+    {
+      "span_ref": "S0128", "page": 10, "source_cue": "4,259 bp",
+      "expected": {"external_reference": "present", "common_condition": "absent", "acceptance_criterion": "present", "procedure": "present", "other": "absent", "unclear": "absent"},
+      "evidence_all_groups": {"external_reference": [["자사의 제한효소지도"]], "acceptance_criterion": [["1,453"], ["4,259"], ["확인되어야"]], "procedure": [["절단", "전기영동"]]},
+      "excluded_reason": "절차가 암묵적 수행 의무 후보인지의 경계는 점수에서 제외."
+    },
+    {
+      "span_ref": "S0132", "page": 10, "source_cue": "플라스미드 보유 수를 계산한다",
+      "expected": {"external_reference": "present", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "present", "other": "absent", "unclear": "absent"},
+      "evidence_all_groups": {"external_reference": [["자사의 선택적 표지자"]], "procedure": [["도말", "배양", "재접종"]]},
+      "excluded_reason": "시험명/절차가 암묵적 의무 후보인지의 경계는 점수에서 제외."
+    },
+    {
+      "span_ref": "S0136", "page": 10, "source_cue": "바이러스 여과,",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "present", "test_obligation_candidate": "absent", "other": "present", "unclear": "present"},
+      "evidence_all_groups": {"procedure": [["접종", "배양", "원심분리"]], "other": [["12/60"]], "unclear": [["바이러스 여과,"]]}
+    },
+    {
+      "span_ref": "S0269", "page": 21, "source_cue": "불용성이물시험",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "present", "unclear": "absent"},
+      "evidence_all_groups": {"test_obligation_candidate": [["불용성이물시험"]]},
+      "excluded_reason": "시험 제목 자체의 other 중복 여부는 점수에서 제외."
+    },
+    {
+      "span_ref": "S0272", "page": 21, "source_cue": "0.25 mL",
+      "expected": {"external_reference": "present", "common_condition": "absent", "acceptance_criterion": "present", "procedure": "present", "test_obligation_candidate": "present", "other": "absent", "unclear": "absent"},
+      "evidence_all_groups": {"external_reference": [["자사의 실용량시험법"]], "acceptance_criterion": [["0.25 mL"], ["이상이어야"]], "procedure": [["채취"]], "test_obligation_candidate": [["시험한다"]]}
+    },
+    {
+      "span_ref": "S0276", "page": 23, "source_cue": "제조원소재지",
+      "expected": {"external_reference": "absent", "common_condition": "absent", "acceptance_criterion": "absent", "procedure": "absent", "test_obligation_candidate": "absent", "other": "present", "unclear": "absent"},
+      "evidence_all_groups": {"other": [["제조원", "제조국", "동국바이오사", "전공정"]]}
+    }
+  ]
+}

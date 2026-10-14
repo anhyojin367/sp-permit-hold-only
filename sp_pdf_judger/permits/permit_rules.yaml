@@ -1,0 +1,179 @@
+version: 1
+
+document_type: permit_rules
+description: >
+  허가서 기반 판정 규칙 파일입니다.
+  PDF의 시험기준이 '실측치', '확인되어야 함'처럼 애매하게 추출되는 경우
+  허가서에 정의된 실제 기준을 이용해 검수합격/검수불합격을 판단합니다.
+
+rules:
+  - rule_id: permit_gene_copy_count
+    title: 허가서 기준 - 유전자 복제수 확인 시험
+    category: 확인시험
+    permit_basis:
+      source_type: 허가서
+      basis_text: >
+        유전자 복제수 확인 시험법에서 실측치는 평균 유전자 복제수를 의미하며,
+        평균 유전자 복제수가 52 copy 이상이면 기준을 만족한 것으로 본다.
+      expected_value:
+        item: 평균 유전자 복제수
+        comparator: ">="
+        value: 52
+        unit: copy
+
+    examples:
+      pass:
+        - criteria: "실측치"
+          result: "평균 유전자 복제수:52 copy (기준 만족)"
+          expected_judgement: "검수합격"
+        - criteria: "실측치"
+          result: "실측치: 102 copies 이상"
+          expected_judgement: "검수합격"
+      fail:
+        - criteria: "실측치"
+          result: "평균 유전자 복제수:40 copy"
+          expected_judgement: "검수불합격"
+
+    match:
+      test_name_any:
+        - 확인시험
+      method_any:
+        - 유전자 복제수 확인 시험법
+        - 유전자 복제수 확인
+      criteria_any:
+        - 실측치
+
+    decision:
+      type: numeric_min_or_text
+      value_regex: "(?:평균\\s*)?유전자\\s*복제수\\s*[:：]?\\s*([0-9,.]+)\\s*cop(?:y|ies)?|실측치\\s*[:：]?\\s*([0-9,.]+)\\s*cop(?:y|ies)?"
+      min_value: 52
+      unit: copy
+      pass_text_any:
+        - 기준 만족
+        - copies 이상
+        - copy 이상
+      reason_pass: "허가서 기준에 따라 유전자 복제수가 52 copy 이상 또는 기준 만족으로 확인되어 검수합격입니다."
+      reason_fail: "허가서 기준에 따라 유전자 복제수는 52 copy 이상이어야 하나 시험결과가 이를 만족하지 않아 검수불합격입니다."
+
+
+  - rule_id: permit_plasmid_marker_4259_bp
+    title: 허가서 기준 - 선택적 표지자 유지 확인
+    category: 플라스미드 대장균수확인시험
+    permit_basis:
+      source_type: 허가서
+      basis_text: >
+        선택적 표지자 유지 확인시험법에서는 4,259 bp 위치의 밴드가 확인되어야 한다.
+        시험결과에서 해당 밴드가 검출 완료 또는 확인으로 기재되면 기준을 만족한 것으로 본다.
+      expected_value:
+        item: 선택적 표지자 밴드
+        expected_bp:
+          - 4259
+        unit: bp
+        tolerance_pct: 0.02
+
+    examples:
+      pass:
+        - criteria: "실측치"
+          result: "실측치: 4,259 bp 밴드 검출 완료"
+          expected_judgement: "검수합격"
+      fail:
+        - criteria: "실측치"
+          result: "실측치: 3,850 bp 밴드 확인"
+          expected_judgement: "검수불합격"
+
+    match:
+      test_name_any:
+        - 플라스미드 대장균수확인시험
+        - 플라스미드
+      method_any:
+        - 선택적 표지자 유지 확인시험법
+        - 선택적 표지자 유지 확인
+      criteria_any:
+        - 실측치
+
+    decision:
+      type: bp_contains_all
+      expected_bp:
+        - 4259
+      tolerance_pct: 0.02
+      result_pass_any:
+        - 검출 완료
+        - 밴드 검출
+        - 확인
+      reason_pass: "허가서 기준에 따라 4,259 bp 밴드가 시험결과에서 확인되어 검수합격입니다."
+      reason_fail: "허가서 기준상 4,259 bp 밴드가 확인되어야 하나 시험결과의 밴드 위치가 일치하지 않아 검수불합격입니다."
+
+
+  - rule_id: permit_e_coli_identification
+    title: 허가서 기준 - E.coli 확인 시험
+    category: 미생물종확인시험
+    permit_basis:
+      source_type: 허가서
+      basis_text: >
+        미생물종확인시험에서는 시험결과에서 E.coli가 동정되거나 확인되어야 한다.
+        16S rRNA 분석, PCR 및 전기영동 결과 등에서 E.coli 동정 또는 확인 문구가 있으면 기준을 만족한 것으로 본다.
+      expected_terms:
+        required:
+          - E.coli
+        evidence:
+          - 동정
+          - 확인
+          - 검출
+
+    examples:
+      pass:
+        - criteria: "PCR 및 전기영동 후 밴드를 확인하였을 때 E.coli로 확인되어야 함"
+          result: "16S rRNA 분석 결과 E.coli로 동정됨"
+          expected_judgement: "검수합격"
+      fail:
+        - criteria: "PCR 및 전기영동 후 밴드를 확인하였을 때 E.coli로 확인되어야 함"
+          result: "16S rRNA 분석 결과 Bacillus로 동정됨"
+          expected_judgement: "검수불합격"
+
+    match:
+      test_name_any:
+        - 미생물종확인시험
+        - 미생물종 확인
+      criteria_any:
+        - E.coli
+        - E.coLi
+        - 확인되어야
+
+    decision:
+      type: terms_confirmed
+      required_terms:
+        - E.coli
+      evidence_terms_any:
+        - 동정
+        - 확인
+        - 검출
+      reason_pass: "허가서 기준에 따라 시험결과에서 E.coli가 동정 또는 확인되어 검수합격입니다."
+      reason_fail: "허가서 기준상 E.coli가 확인되어야 하나 시험결과에서 충분히 확인되지 않아 검수불합격입니다."
+
+
+  - rule_id: permit_declared_criteria_satisfied
+    title: 허가서 기준 - 실측치 기준 만족
+    category: 공통 실측치 판정
+    permit_basis:
+      source_type: 허가서
+      basis_text: >
+        시험기준이 실측치로 기재되어 있고 시험결과에 기준 만족이라고 명시된 경우,
+        허가서상 해당 실측치 기준을 만족한 것으로 본다.
+      caution: >
+        이 규칙은 너무 넓게 적용될 수 있으므로 criteria가 실측치이고 result에 기준 만족이 있는 경우에만 적용한다.
+
+    examples:
+      pass:
+        - criteria: "실측치"
+          result: "평균 유전자 복제수:52 copy (기준 만족)"
+          expected_judgement: "검수합격"
+
+    match:
+      criteria_any:
+        - 실측치
+      result_any:
+        - 기준 만족
+
+    decision:
+      type: text_pass
+      reason_pass: "허가서 기준의 실측치 항목에서 시험결과가 기준 만족으로 기재되어 검수합격입니다."

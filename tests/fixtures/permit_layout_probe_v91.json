@@ -1,0 +1,19 @@
+{
+  "schema": "permit-layout-probe-v1",
+  "purpose": "페이지 후보 단서 실험의 호출 전 정답 고정. 실제 네 구간은 v87/v88 수동 정답 및 MD 보완에 쓰지 않았으며, 같은 허가서 전체가 과거 초안 추출에 사용된 사실과 구별한다. 합성 네 사례는 분수와 페이지 표기의 대조이며 실제 PDF 일반화 증거가 아니다.",
+  "permit_sha256": "0c153c31ca738dfbf6a2b752ea09fa8a8ea9badbae3466d870c6a2279e77f8d2",
+  "md_sha256": "e0352ad647fdbf54d13544055579cce77f743185507748833cb93825caaa0c7e",
+  "stage_path": ["제조방법 및 시험기준", "Component A 중간체 원액", "Component A 중간체 원액에 대한 시험"],
+  "actual_cases": [
+    {"span_ref":"S0051", "page":4, "expected":{"other":"present","unclear":"present"}, "evidence_all_groups":{"other":[["6/60"]],"unclear":[["바이러스에 의한 오염이"]]}},
+    {"span_ref":"S0121", "page":9, "expected":{"other":"present","unclear":"absent"}, "evidence_all_groups":{"other":[["11/60"]]}},
+    {"span_ref":"S0137", "page":11, "expected":{"other":"present","unclear":"absent"}, "evidence_all_groups":{"other":[["문서확인번호"]]}},
+    {"span_ref":"S0142", "page":11, "expected":{"other":"absent","unclear":"absent"}, "evidence_all_groups":{}}
+  ],
+  "synthetic_cases": [
+    {"case_id":"ratio_complete", "text":"측정 비율:\n3/4\n전체 4개 중 3개의 양성 비율이며 기준을 만족한다.", "expected":{"other":"absent","unclear":"absent"}, "evidence_all_groups":{}},
+    {"case_id":"page_complete", "text":"시료를 혼합한다.\n3/4", "expected":{"other":"present","unclear":"absent"}, "evidence_all_groups":{"other":[["3/4"]]}},
+    {"case_id":"page_cut", "text":"시료를 혼합한 뒤,\n3/4", "expected":{"other":"present","unclear":"present"}, "evidence_all_groups":{"other":[["3/4"]],"unclear":[["혼합한 뒤,"]]}},
+    {"case_id":"ratio_continued", "text":"혼합액의 구성 비율은\n3/4\n이며 충분히 교반한다.", "expected":{"other":"absent","unclear":"absent"}, "evidence_all_groups":{}}
+  ]
+}

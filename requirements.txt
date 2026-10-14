@@ -1,0 +1,23 @@
+# Python 3.10-3.14 runtime; share pins except Camelot's Python-specific pypdf dependency.
+# Deployment restart marker: v111-clova-bounded-retry (reload transport exception classes).
+# Keep pins unchanged; Community Cloud re-resolves dependencies when this file changes.
+# Streamlit 1.61 includes the Python 3.14 deferred-annotation fix.
+streamlit==1.61.0
+pypdf==3.17.4; python_version < "3.12"
+pypdf==5.9.0; python_version >= "3.12"
+pypdfium2==5.8.0
+pillow==12.0.0
+
+pymupdf==1.27.2.3
+pdfplumber==0.11.6
+pdfminer.six==20250327
+camelot-py==1.0.9
+pytesseract==0.3.13
+scikit-learn==1.7.2
+openai==3.19.0
+pydantic==2.12.5
+python-dotenv==1.1.0
+openpyxl==3.1.5
+PyYAML==6.0.3
+opencv-python-headless==4.13.0.92
+pandas==2.3.3

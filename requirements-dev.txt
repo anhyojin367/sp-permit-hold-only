@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest
+# Synthetic PDF extraction -> MD regression only; not needed for the running UI.
+reportlab==5.0.1

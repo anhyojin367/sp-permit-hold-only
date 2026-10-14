@@ -1,0 +1,10 @@
+[server]
+# Match the PDF validator and the upload dialog's advertised per-file limit.
+maxUploadSize = 100
+
+[theme]
+base = "light"
+primaryColor = "#1677e8"
+backgroundColor = "#f5f7fb"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1f2937"

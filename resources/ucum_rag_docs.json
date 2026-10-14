@@ -1,0 +1,3314 @@
+[
+  {
+    "kind": "prefix",
+    "code": "Y",
+    "name": "yotta",
+    "symbol": "Y",
+    "factor": 1e+24,
+    "text": "UCUM prefix Y (Y) means yotta and equals 1e+24"
+  },
+  {
+    "kind": "prefix",
+    "code": "Z",
+    "name": "zetta",
+    "symbol": "Z",
+    "factor": 1e+21,
+    "text": "UCUM prefix Z (Z) means zetta and equals 1e+21"
+  },
+  {
+    "kind": "prefix",
+    "code": "E",
+    "name": "exa",
+    "symbol": "E",
+    "factor": 1e+18,
+    "text": "UCUM prefix E (E) means exa and equals 1e+18"
+  },
+  {
+    "kind": "prefix",
+    "code": "P",
+    "name": "peta",
+    "symbol": "P",
+    "factor": 1000000000000000.0,
+    "text": "UCUM prefix P (P) means peta and equals 1000000000000000.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "T",
+    "name": "tera",
+    "symbol": "T",
+    "factor": 1000000000000.0,
+    "text": "UCUM prefix T (T) means tera and equals 1000000000000.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "G",
+    "name": "giga",
+    "symbol": "G",
+    "factor": 1000000000.0,
+    "text": "UCUM prefix G (G) means giga and equals 1000000000.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "M",
+    "name": "mega",
+    "symbol": "M",
+    "factor": 1000000.0,
+    "text": "UCUM prefix M (M) means mega and equals 1000000.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "k",
+    "name": "kilo",
+    "symbol": "k",
+    "factor": 1000.0,
+    "text": "UCUM prefix k (k) means kilo and equals 1000.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "h",
+    "name": "hecto",
+    "symbol": "h",
+    "factor": 100.0,
+    "text": "UCUM prefix h (h) means hecto and equals 100.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "da",
+    "name": "deka",
+    "symbol": "da",
+    "factor": 10.0,
+    "text": "UCUM prefix da (da) means deka and equals 10.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "d",
+    "name": "deci",
+    "symbol": "d",
+    "factor": 0.1,
+    "text": "UCUM prefix d (d) means deci and equals 0.1"
+  },
+  {
+    "kind": "prefix",
+    "code": "c",
+    "name": "centi",
+    "symbol": "c",
+    "factor": 0.01,
+    "text": "UCUM prefix c (c) means centi and equals 0.01"
+  },
+  {
+    "kind": "prefix",
+    "code": "m",
+    "name": "milli",
+    "symbol": "m",
+    "factor": 0.001,
+    "text": "UCUM prefix m (m) means milli and equals 0.001"
+  },
+  {
+    "kind": "prefix",
+    "code": "u",
+    "name": "micro",
+    "symbol": "μ",
+    "factor": 1e-06,
+    "text": "UCUM prefix u (μ) means micro and equals 1e-06"
+  },
+  {
+    "kind": "prefix",
+    "code": "n",
+    "name": "nano",
+    "symbol": "n",
+    "factor": 1e-09,
+    "text": "UCUM prefix n (n) means nano and equals 1e-09"
+  },
+  {
+    "kind": "prefix",
+    "code": "p",
+    "name": "pico",
+    "symbol": "p",
+    "factor": 1e-12,
+    "text": "UCUM prefix p (p) means pico and equals 1e-12"
+  },
+  {
+    "kind": "prefix",
+    "code": "f",
+    "name": "femto",
+    "symbol": "f",
+    "factor": 1e-15,
+    "text": "UCUM prefix f (f) means femto and equals 1e-15"
+  },
+  {
+    "kind": "prefix",
+    "code": "a",
+    "name": "atto",
+    "symbol": "a",
+    "factor": 1e-18,
+    "text": "UCUM prefix a (a) means atto and equals 1e-18"
+  },
+  {
+    "kind": "prefix",
+    "code": "z",
+    "name": "zepto",
+    "symbol": "z",
+    "factor": 1e-21,
+    "text": "UCUM prefix z (z) means zepto and equals 1e-21"
+  },
+  {
+    "kind": "prefix",
+    "code": "y",
+    "name": "yocto",
+    "symbol": "y",
+    "factor": 1e-24,
+    "text": "UCUM prefix y (y) means yocto and equals 1e-24"
+  },
+  {
+    "kind": "base-unit",
+    "code": "m",
+    "name": "meter",
+    "symbol": "m",
+    "property": "length",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit m named meter, symbol m, property length, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "s",
+    "name": "second",
+    "symbol": "s",
+    "property": "time",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit s named second, symbol s, property time, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "g",
+    "name": "gram",
+    "symbol": "g",
+    "property": "mass",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit g named gram, symbol g, property mass, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "rad",
+    "name": "radian",
+    "symbol": "rad",
+    "property": "plane angle",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit rad named radian, symbol rad, property plane angle, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "K",
+    "name": "kelvin",
+    "symbol": "K",
+    "property": "temperature",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit K named kelvin, symbol K, property temperature, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "C",
+    "name": "coulomb",
+    "symbol": "C",
+    "property": "electric charge",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit C named coulomb, symbol C, property electric charge, reference unit , reference value "
+  },
+  {
+    "kind": "base-unit",
+    "code": "cd",
+    "name": "candela",
+    "symbol": "cd",
+    "property": "luminous intensity",
+    "ref_unit": "",
+    "ref_value": "",
+    "text": "UCUM base-unit cd named candela, symbol cd, property luminous intensity, reference unit , reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "10*",
+    "name": "the number ten for arbitrary powers",
+    "symbol": "10",
+    "property": "number",
+    "ref_unit": "1",
+    "ref_value": "10",
+    "text": "UCUM unit 10* named the number ten for arbitrary powers, symbol 10, property number, reference unit 1, reference value 10"
+  },
+  {
+    "kind": "unit",
+    "code": "10^",
+    "name": "the number ten for arbitrary powers",
+    "symbol": "10",
+    "property": "number",
+    "ref_unit": "1",
+    "ref_value": "10",
+    "text": "UCUM unit 10^ named the number ten for arbitrary powers, symbol 10, property number, reference unit 1, reference value 10"
+  },
+  {
+    "kind": "unit",
+    "code": "[pi]",
+    "name": "the number pi",
+    "symbol": "π",
+    "property": "number",
+    "ref_unit": "1",
+    "ref_value": "3.1415926535897932384626433832795028841971693993751058209749445923",
+    "text": "UCUM unit [pi] named the number pi, symbol π, property number, reference unit 1, reference value 3.1415926535897932384626433832795028841971693993751058209749445923"
+  },
+  {
+    "kind": "unit",
+    "code": "%",
+    "name": "percent",
+    "symbol": "%",
+    "property": "fraction",
+    "ref_unit": "10*-2",
+    "ref_value": "1",
+    "text": "UCUM unit % named percent, symbol %, property fraction, reference unit 10*-2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ppth]",
+    "name": "parts per thousand",
+    "symbol": "ppth",
+    "property": "fraction",
+    "ref_unit": "10*-3",
+    "ref_value": "1",
+    "text": "UCUM unit [ppth] named parts per thousand, symbol ppth, property fraction, reference unit 10*-3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ppm]",
+    "name": "parts per million",
+    "symbol": "ppm",
+    "property": "fraction",
+    "ref_unit": "10*-6",
+    "ref_value": "1",
+    "text": "UCUM unit [ppm] named parts per million, symbol ppm, property fraction, reference unit 10*-6, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ppb]",
+    "name": "parts per billion",
+    "symbol": "ppb",
+    "property": "fraction",
+    "ref_unit": "10*-9",
+    "ref_value": "1",
+    "text": "UCUM unit [ppb] named parts per billion, symbol ppb, property fraction, reference unit 10*-9, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pptr]",
+    "name": "parts per trillion",
+    "symbol": "pptr",
+    "property": "fraction",
+    "ref_unit": "10*-12",
+    "ref_value": "1",
+    "text": "UCUM unit [pptr] named parts per trillion, symbol pptr, property fraction, reference unit 10*-12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "mol",
+    "name": "mole",
+    "symbol": "mol",
+    "property": "amount of substance",
+    "ref_unit": "10*23",
+    "ref_value": "6.02214076",
+    "text": "UCUM unit mol named mole, symbol mol, property amount of substance, reference unit 10*23, reference value 6.02214076"
+  },
+  {
+    "kind": "unit",
+    "code": "sr",
+    "name": "steradian",
+    "symbol": "sr",
+    "property": "solid angle",
+    "ref_unit": "rad2",
+    "ref_value": "1",
+    "text": "UCUM unit sr named steradian, symbol sr, property solid angle, reference unit rad2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Hz",
+    "name": "hertz",
+    "symbol": "Hz",
+    "property": "frequency",
+    "ref_unit": "s-1",
+    "ref_value": "1",
+    "text": "UCUM unit Hz named hertz, symbol Hz, property frequency, reference unit s-1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "N",
+    "name": "newton",
+    "symbol": "N",
+    "property": "force",
+    "ref_unit": "kg.m/s2",
+    "ref_value": "1",
+    "text": "UCUM unit N named newton, symbol N, property force, reference unit kg.m/s2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Pa",
+    "name": "pascal",
+    "symbol": "Pa",
+    "property": "pressure",
+    "ref_unit": "N/m2",
+    "ref_value": "1",
+    "text": "UCUM unit Pa named pascal, symbol Pa, property pressure, reference unit N/m2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "J",
+    "name": "joule",
+    "symbol": "J",
+    "property": "energy",
+    "ref_unit": "N.m",
+    "ref_value": "1",
+    "text": "UCUM unit J named joule, symbol J, property energy, reference unit N.m, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "W",
+    "name": "watt",
+    "symbol": "W",
+    "property": "power",
+    "ref_unit": "J/s",
+    "ref_value": "1",
+    "text": "UCUM unit W named watt, symbol W, property power, reference unit J/s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "A",
+    "name": "ampère",
+    "symbol": "A",
+    "property": "electric current",
+    "ref_unit": "C/s",
+    "ref_value": "1",
+    "text": "UCUM unit A named ampère, symbol A, property electric current, reference unit C/s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "V",
+    "name": "volt",
+    "symbol": "V",
+    "property": "electric potential",
+    "ref_unit": "J/C",
+    "ref_value": "1",
+    "text": "UCUM unit V named volt, symbol V, property electric potential, reference unit J/C, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "F",
+    "name": "farad",
+    "symbol": "F",
+    "property": "electric capacitance",
+    "ref_unit": "C/V",
+    "ref_value": "1",
+    "text": "UCUM unit F named farad, symbol F, property electric capacitance, reference unit C/V, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Ohm",
+    "name": "ohm",
+    "symbol": "Ω",
+    "property": "electric resistance",
+    "ref_unit": "V/A",
+    "ref_value": "1",
+    "text": "UCUM unit Ohm named ohm, symbol Ω, property electric resistance, reference unit V/A, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "S",
+    "name": "siemens",
+    "symbol": "S",
+    "property": "electric conductance",
+    "ref_unit": "Ohm-1",
+    "ref_value": "1",
+    "text": "UCUM unit S named siemens, symbol S, property electric conductance, reference unit Ohm-1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Wb",
+    "name": "weber",
+    "symbol": "Wb",
+    "property": "magnetic flux",
+    "ref_unit": "V.s",
+    "ref_value": "1",
+    "text": "UCUM unit Wb named weber, symbol Wb, property magnetic flux, reference unit V.s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Cel",
+    "name": "degree Celsius",
+    "symbol": "°C",
+    "property": "temperature",
+    "ref_unit": "cel(1 K)",
+    "ref_value": "",
+    "text": "UCUM unit Cel named degree Celsius, symbol °C, property temperature, reference unit cel(1 K), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "T",
+    "name": "tesla",
+    "symbol": "T",
+    "property": "magnetic flux density",
+    "ref_unit": "Wb/m2",
+    "ref_value": "1",
+    "text": "UCUM unit T named tesla, symbol T, property magnetic flux density, reference unit Wb/m2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "H",
+    "name": "henry",
+    "symbol": "H",
+    "property": "inductance",
+    "ref_unit": "Wb/A",
+    "ref_value": "1",
+    "text": "UCUM unit H named henry, symbol H, property inductance, reference unit Wb/A, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "lm",
+    "name": "lumen",
+    "symbol": "lm",
+    "property": "luminous flux",
+    "ref_unit": "cd.sr",
+    "ref_value": "1",
+    "text": "UCUM unit lm named lumen, symbol lm, property luminous flux, reference unit cd.sr, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "lx",
+    "name": "lux",
+    "symbol": "lx",
+    "property": "illuminance",
+    "ref_unit": "lm/m2",
+    "ref_value": "1",
+    "text": "UCUM unit lx named lux, symbol lx, property illuminance, reference unit lm/m2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Bq",
+    "name": "becquerel",
+    "symbol": "Bq",
+    "property": "radioactivity",
+    "ref_unit": "s-1",
+    "ref_value": "1",
+    "text": "UCUM unit Bq named becquerel, symbol Bq, property radioactivity, reference unit s-1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Gy",
+    "name": "gray",
+    "symbol": "Gy",
+    "property": "energy dose",
+    "ref_unit": "J/kg",
+    "ref_value": "1",
+    "text": "UCUM unit Gy named gray, symbol Gy, property energy dose, reference unit J/kg, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Sv",
+    "name": "sievert",
+    "symbol": "Sv",
+    "property": "dose equivalent",
+    "ref_unit": "J/kg",
+    "ref_value": "1",
+    "text": "UCUM unit Sv named sievert, symbol Sv, property dose equivalent, reference unit J/kg, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "gon",
+    "name": "gon",
+    "symbol": "",
+    "property": "plane angle",
+    "ref_unit": "deg",
+    "ref_value": "0.9",
+    "text": "UCUM unit gon named gon, symbol , property plane angle, reference unit deg, reference value 0.9"
+  },
+  {
+    "kind": "unit",
+    "code": "deg",
+    "name": "degree",
+    "symbol": "°",
+    "property": "plane angle",
+    "ref_unit": "[pi].rad/360",
+    "ref_value": "2",
+    "text": "UCUM unit deg named degree, symbol °, property plane angle, reference unit [pi].rad/360, reference value 2"
+  },
+  {
+    "kind": "unit",
+    "code": "'",
+    "name": "minute",
+    "symbol": "'",
+    "property": "plane angle",
+    "ref_unit": "deg/60",
+    "ref_value": "1",
+    "text": "UCUM unit ' named minute, symbol ', property plane angle, reference unit deg/60, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "''",
+    "name": "second",
+    "symbol": "''",
+    "property": "plane angle",
+    "ref_unit": "'/60",
+    "ref_value": "1",
+    "text": "UCUM unit '' named second, symbol '', property plane angle, reference unit '/60, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "l",
+    "name": "liter",
+    "symbol": "l",
+    "property": "volume",
+    "ref_unit": "dm3",
+    "ref_value": "1",
+    "text": "UCUM unit l named liter, symbol l, property volume, reference unit dm3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "L",
+    "name": "liter",
+    "symbol": "L",
+    "property": "volume",
+    "ref_unit": "l",
+    "ref_value": "1",
+    "text": "UCUM unit L named liter, symbol L, property volume, reference unit l, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "ar",
+    "name": "are",
+    "symbol": "a",
+    "property": "area",
+    "ref_unit": "m2",
+    "ref_value": "100",
+    "text": "UCUM unit ar named are, symbol a, property area, reference unit m2, reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "min",
+    "name": "minute",
+    "symbol": "min",
+    "property": "time",
+    "ref_unit": "s",
+    "ref_value": "60",
+    "text": "UCUM unit min named minute, symbol min, property time, reference unit s, reference value 60"
+  },
+  {
+    "kind": "unit",
+    "code": "h",
+    "name": "hour",
+    "symbol": "h",
+    "property": "time",
+    "ref_unit": "min",
+    "ref_value": "60",
+    "text": "UCUM unit h named hour, symbol h, property time, reference unit min, reference value 60"
+  },
+  {
+    "kind": "unit",
+    "code": "d",
+    "name": "day",
+    "symbol": "d",
+    "property": "time",
+    "ref_unit": "h",
+    "ref_value": "24",
+    "text": "UCUM unit d named day, symbol d, property time, reference unit h, reference value 24"
+  },
+  {
+    "kind": "unit",
+    "code": "a_t",
+    "name": "tropical year",
+    "symbol": "a",
+    "property": "time",
+    "ref_unit": "d",
+    "ref_value": "365.24219",
+    "text": "UCUM unit a_t named tropical year, symbol a, property time, reference unit d, reference value 365.24219"
+  },
+  {
+    "kind": "unit",
+    "code": "a_j",
+    "name": "mean Julian year",
+    "symbol": "a",
+    "property": "time",
+    "ref_unit": "d",
+    "ref_value": "365.25",
+    "text": "UCUM unit a_j named mean Julian year, symbol a, property time, reference unit d, reference value 365.25"
+  },
+  {
+    "kind": "unit",
+    "code": "a_g",
+    "name": "mean Gregorian year",
+    "symbol": "a",
+    "property": "time",
+    "ref_unit": "d",
+    "ref_value": "365.2425",
+    "text": "UCUM unit a_g named mean Gregorian year, symbol a, property time, reference unit d, reference value 365.2425"
+  },
+  {
+    "kind": "unit",
+    "code": "a",
+    "name": "year",
+    "symbol": "a",
+    "property": "time",
+    "ref_unit": "a_j",
+    "ref_value": "1",
+    "text": "UCUM unit a named year, symbol a, property time, reference unit a_j, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "wk",
+    "name": "week",
+    "symbol": "wk",
+    "property": "time",
+    "ref_unit": "d",
+    "ref_value": "7",
+    "text": "UCUM unit wk named week, symbol wk, property time, reference unit d, reference value 7"
+  },
+  {
+    "kind": "unit",
+    "code": "mo_s",
+    "name": "synodal month",
+    "symbol": "mo",
+    "property": "time",
+    "ref_unit": "d",
+    "ref_value": "29.53059",
+    "text": "UCUM unit mo_s named synodal month, symbol mo, property time, reference unit d, reference value 29.53059"
+  },
+  {
+    "kind": "unit",
+    "code": "mo_j",
+    "name": "mean Julian month",
+    "symbol": "mo",
+    "property": "time",
+    "ref_unit": "a_j/12",
+    "ref_value": "1",
+    "text": "UCUM unit mo_j named mean Julian month, symbol mo, property time, reference unit a_j/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "mo_g",
+    "name": "mean Gregorian month",
+    "symbol": "mo",
+    "property": "time",
+    "ref_unit": "a_g/12",
+    "ref_value": "1",
+    "text": "UCUM unit mo_g named mean Gregorian month, symbol mo, property time, reference unit a_g/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "mo",
+    "name": "month",
+    "symbol": "mo",
+    "property": "time",
+    "ref_unit": "mo_j",
+    "ref_value": "1",
+    "text": "UCUM unit mo named month, symbol mo, property time, reference unit mo_j, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "t",
+    "name": "tonne",
+    "symbol": "t",
+    "property": "mass",
+    "ref_unit": "kg",
+    "ref_value": "1e3",
+    "text": "UCUM unit t named tonne, symbol t, property mass, reference unit kg, reference value 1e3"
+  },
+  {
+    "kind": "unit",
+    "code": "bar",
+    "name": "bar",
+    "symbol": "bar",
+    "property": "pressure",
+    "ref_unit": "Pa",
+    "ref_value": "1e5",
+    "text": "UCUM unit bar named bar, symbol bar, property pressure, reference unit Pa, reference value 1e5"
+  },
+  {
+    "kind": "unit",
+    "code": "u",
+    "name": "unified atomic mass unit",
+    "symbol": "u",
+    "property": "mass",
+    "ref_unit": "g",
+    "ref_value": "1.66053906660e-24",
+    "text": "UCUM unit u named unified atomic mass unit, symbol u, property mass, reference unit g, reference value 1.66053906660e-24"
+  },
+  {
+    "kind": "unit",
+    "code": "eV",
+    "name": "electronvolt",
+    "symbol": "eV",
+    "property": "energy",
+    "ref_unit": "[e].V",
+    "ref_value": "1",
+    "text": "UCUM unit eV named electronvolt, symbol eV, property energy, reference unit [e].V, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "AU",
+    "name": "astronomic unit",
+    "symbol": "AU",
+    "property": "length",
+    "ref_unit": "Mm",
+    "ref_value": "149597.870691",
+    "text": "UCUM unit AU named astronomic unit, symbol AU, property length, reference unit Mm, reference value 149597.870691"
+  },
+  {
+    "kind": "unit",
+    "code": "pc",
+    "name": "parsec",
+    "symbol": "pc",
+    "property": "length",
+    "ref_unit": "m",
+    "ref_value": "3.085678e16",
+    "text": "UCUM unit pc named parsec, symbol pc, property length, reference unit m, reference value 3.085678e16"
+  },
+  {
+    "kind": "unit",
+    "code": "[c]",
+    "name": "velocity of light",
+    "symbol": "",
+    "property": "velocity",
+    "ref_unit": "m/s",
+    "ref_value": "299792458",
+    "text": "UCUM unit [c] named velocity of light, symbol , property velocity, reference unit m/s, reference value 299792458"
+  },
+  {
+    "kind": "unit",
+    "code": "[h]",
+    "name": "Planck constant",
+    "symbol": "",
+    "property": "action",
+    "ref_unit": "J.s",
+    "ref_value": "6.62607015e-34",
+    "text": "UCUM unit [h] named Planck constant, symbol , property action, reference unit J.s, reference value 6.62607015e-34"
+  },
+  {
+    "kind": "unit",
+    "code": "[k]",
+    "name": "Boltzmann constant",
+    "symbol": "",
+    "property": "(unclassified)",
+    "ref_unit": "J/K",
+    "ref_value": "1.380649e-23",
+    "text": "UCUM unit [k] named Boltzmann constant, symbol , property (unclassified), reference unit J/K, reference value 1.380649e-23"
+  },
+  {
+    "kind": "unit",
+    "code": "[eps_0]",
+    "name": "permittivity of vacuum",
+    "symbol": "",
+    "property": "electric permittivity",
+    "ref_unit": "F/m",
+    "ref_value": "8.854187817e-12",
+    "text": "UCUM unit [eps_0] named permittivity of vacuum, symbol , property electric permittivity, reference unit F/m, reference value 8.854187817e-12"
+  },
+  {
+    "kind": "unit",
+    "code": "[mu_0]",
+    "name": "permeability of vacuum",
+    "symbol": "",
+    "property": "magnetic permeability",
+    "ref_unit": "4.[pi].10*-7.N/A2",
+    "ref_value": "1",
+    "text": "UCUM unit [mu_0] named permeability of vacuum, symbol , property magnetic permeability, reference unit 4.[pi].10*-7.N/A2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[e]",
+    "name": "elementary charge",
+    "symbol": "",
+    "property": "electric charge",
+    "ref_unit": "C",
+    "ref_value": "1.602176634e-19",
+    "text": "UCUM unit [e] named elementary charge, symbol , property electric charge, reference unit C, reference value 1.602176634e-19"
+  },
+  {
+    "kind": "unit",
+    "code": "[m_e]",
+    "name": "electron mass",
+    "symbol": "",
+    "property": "mass",
+    "ref_unit": "kg",
+    "ref_value": "9.1093837139e-31",
+    "text": "UCUM unit [m_e] named electron mass, symbol , property mass, reference unit kg, reference value 9.1093837139e-31"
+  },
+  {
+    "kind": "unit",
+    "code": "[m_p]",
+    "name": "proton mass",
+    "symbol": "",
+    "property": "mass",
+    "ref_unit": "kg",
+    "ref_value": "1.67262192595e-27",
+    "text": "UCUM unit [m_p] named proton mass, symbol , property mass, reference unit kg, reference value 1.67262192595e-27"
+  },
+  {
+    "kind": "unit",
+    "code": "[G]",
+    "name": "Newtonian constant of gravitation",
+    "symbol": "",
+    "property": "(unclassified)",
+    "ref_unit": "m3.kg-1.s-2",
+    "ref_value": "6.67430e-11",
+    "text": "UCUM unit [G] named Newtonian constant of gravitation, symbol , property (unclassified), reference unit m3.kg-1.s-2, reference value 6.67430e-11"
+  },
+  {
+    "kind": "unit",
+    "code": "[g]",
+    "name": "standard acceleration of free fall",
+    "symbol": "",
+    "property": "acceleration",
+    "ref_unit": "m/s2",
+    "ref_value": "980665e-5",
+    "text": "UCUM unit [g] named standard acceleration of free fall, symbol , property acceleration, reference unit m/s2, reference value 980665e-5"
+  },
+  {
+    "kind": "unit",
+    "code": "atm",
+    "name": "standard atmosphere",
+    "symbol": "atm",
+    "property": "pressure",
+    "ref_unit": "Pa",
+    "ref_value": "101325",
+    "text": "UCUM unit atm named standard atmosphere, symbol atm, property pressure, reference unit Pa, reference value 101325"
+  },
+  {
+    "kind": "unit",
+    "code": "[ly]",
+    "name": "light-year",
+    "symbol": "l.y.",
+    "property": "length",
+    "ref_unit": "[c].a_j",
+    "ref_value": "1",
+    "text": "UCUM unit [ly] named light-year, symbol l.y., property length, reference unit [c].a_j, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "gf",
+    "name": "gram-force",
+    "symbol": "gf",
+    "property": "force",
+    "ref_unit": "g.[g]",
+    "ref_value": "1",
+    "text": "UCUM unit gf named gram-force, symbol gf, property force, reference unit g.[g], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[lbf_av]",
+    "name": "pound force",
+    "symbol": "lbf",
+    "property": "force",
+    "ref_unit": "[lb_av].[g]",
+    "ref_value": "1",
+    "text": "UCUM unit [lbf_av] named pound force, symbol lbf, property force, reference unit [lb_av].[g], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Ky",
+    "name": "Kayser",
+    "symbol": "K",
+    "property": "lineic number",
+    "ref_unit": "cm-1",
+    "ref_value": "1",
+    "text": "UCUM unit Ky named Kayser, symbol K, property lineic number, reference unit cm-1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Gal",
+    "name": "Gal",
+    "symbol": "Gal",
+    "property": "acceleration",
+    "ref_unit": "cm/s2",
+    "ref_value": "1",
+    "text": "UCUM unit Gal named Gal, symbol Gal, property acceleration, reference unit cm/s2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "dyn",
+    "name": "dyne",
+    "symbol": "dyn",
+    "property": "force",
+    "ref_unit": "g.cm/s2",
+    "ref_value": "1",
+    "text": "UCUM unit dyn named dyne, symbol dyn, property force, reference unit g.cm/s2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "erg",
+    "name": "erg",
+    "symbol": "erg",
+    "property": "energy",
+    "ref_unit": "dyn.cm",
+    "ref_value": "1",
+    "text": "UCUM unit erg named erg, symbol erg, property energy, reference unit dyn.cm, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "P",
+    "name": "Poise",
+    "symbol": "P",
+    "property": "dynamic viscosity",
+    "ref_unit": "dyn.s/cm2",
+    "ref_value": "1",
+    "text": "UCUM unit P named Poise, symbol P, property dynamic viscosity, reference unit dyn.s/cm2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Bi",
+    "name": "Biot",
+    "symbol": "Bi",
+    "property": "electric current",
+    "ref_unit": "A",
+    "ref_value": "10",
+    "text": "UCUM unit Bi named Biot, symbol Bi, property electric current, reference unit A, reference value 10"
+  },
+  {
+    "kind": "unit",
+    "code": "St",
+    "name": "Stokes",
+    "symbol": "St",
+    "property": "kinematic viscosity",
+    "ref_unit": "cm2/s",
+    "ref_value": "1",
+    "text": "UCUM unit St named Stokes, symbol St, property kinematic viscosity, reference unit cm2/s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Mx",
+    "name": "Maxwell",
+    "symbol": "Mx",
+    "property": "flux of magnetic induction",
+    "ref_unit": "Wb",
+    "ref_value": "1e-8",
+    "text": "UCUM unit Mx named Maxwell, symbol Mx, property flux of magnetic induction, reference unit Wb, reference value 1e-8"
+  },
+  {
+    "kind": "unit",
+    "code": "G",
+    "name": "Gauss",
+    "symbol": "Gs",
+    "property": "magnetic flux density",
+    "ref_unit": "T",
+    "ref_value": "1e-4",
+    "text": "UCUM unit G named Gauss, symbol Gs, property magnetic flux density, reference unit T, reference value 1e-4"
+  },
+  {
+    "kind": "unit",
+    "code": "Oe",
+    "name": "Oersted",
+    "symbol": "Oe",
+    "property": "magnetic field intensity",
+    "ref_unit": "/[pi].A/m",
+    "ref_value": "250",
+    "text": "UCUM unit Oe named Oersted, symbol Oe, property magnetic field intensity, reference unit /[pi].A/m, reference value 250"
+  },
+  {
+    "kind": "unit",
+    "code": "Gb",
+    "name": "Gilbert",
+    "symbol": "Gb",
+    "property": "magnetic tension",
+    "ref_unit": "Oe.cm",
+    "ref_value": "1",
+    "text": "UCUM unit Gb named Gilbert, symbol Gb, property magnetic tension, reference unit Oe.cm, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "sb",
+    "name": "stilb",
+    "symbol": "sb",
+    "property": "lum. intensity density",
+    "ref_unit": "cd/cm2",
+    "ref_value": "1",
+    "text": "UCUM unit sb named stilb, symbol sb, property lum. intensity density, reference unit cd/cm2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Lmb",
+    "name": "Lambert",
+    "symbol": "L",
+    "property": "brightness",
+    "ref_unit": "cd/cm2/[pi]",
+    "ref_value": "1",
+    "text": "UCUM unit Lmb named Lambert, symbol L, property brightness, reference unit cd/cm2/[pi], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "ph",
+    "name": "phot",
+    "symbol": "ph",
+    "property": "illuminance",
+    "ref_unit": "lx",
+    "ref_value": "1e-4",
+    "text": "UCUM unit ph named phot, symbol ph, property illuminance, reference unit lx, reference value 1e-4"
+  },
+  {
+    "kind": "unit",
+    "code": "Ci",
+    "name": "Curie",
+    "symbol": "Ci",
+    "property": "radioactivity",
+    "ref_unit": "Bq",
+    "ref_value": "37e9",
+    "text": "UCUM unit Ci named Curie, symbol Ci, property radioactivity, reference unit Bq, reference value 37e9"
+  },
+  {
+    "kind": "unit",
+    "code": "R",
+    "name": "Roentgen",
+    "symbol": "R",
+    "property": "ion dose",
+    "ref_unit": "C/kg",
+    "ref_value": "2.58e-4",
+    "text": "UCUM unit R named Roentgen, symbol R, property ion dose, reference unit C/kg, reference value 2.58e-4"
+  },
+  {
+    "kind": "unit",
+    "code": "RAD",
+    "name": "radiation absorbed dose",
+    "symbol": "RAD",
+    "property": "energy dose",
+    "ref_unit": "erg/g",
+    "ref_value": "100",
+    "text": "UCUM unit RAD named radiation absorbed dose, symbol RAD, property energy dose, reference unit erg/g, reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "REM",
+    "name": "radiation equivalent man",
+    "symbol": "REM",
+    "property": "dose equivalent",
+    "ref_unit": "RAD",
+    "ref_value": "1",
+    "text": "UCUM unit REM named radiation equivalent man, symbol REM, property dose equivalent, reference unit RAD, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[in_i]",
+    "name": "inch",
+    "symbol": "in",
+    "property": "length",
+    "ref_unit": "cm",
+    "ref_value": "254e-2",
+    "text": "UCUM unit [in_i] named inch, symbol in, property length, reference unit cm, reference value 254e-2"
+  },
+  {
+    "kind": "unit",
+    "code": "[ft_i]",
+    "name": "foot",
+    "symbol": "ft",
+    "property": "length",
+    "ref_unit": "[in_i]",
+    "ref_value": "12",
+    "text": "UCUM unit [ft_i] named foot, symbol ft, property length, reference unit [in_i], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[yd_i]",
+    "name": "yard",
+    "symbol": "yd",
+    "property": "length",
+    "ref_unit": "[ft_i]",
+    "ref_value": "3",
+    "text": "UCUM unit [yd_i] named yard, symbol yd, property length, reference unit [ft_i], reference value 3"
+  },
+  {
+    "kind": "unit",
+    "code": "[mi_i]",
+    "name": "mile",
+    "symbol": "mi",
+    "property": "length",
+    "ref_unit": "[ft_i]",
+    "ref_value": "5280",
+    "text": "UCUM unit [mi_i] named mile, symbol mi, property length, reference unit [ft_i], reference value 5280"
+  },
+  {
+    "kind": "unit",
+    "code": "[fth_i]",
+    "name": "fathom",
+    "symbol": "fth",
+    "property": "depth of water",
+    "ref_unit": "[ft_i]",
+    "ref_value": "6",
+    "text": "UCUM unit [fth_i] named fathom, symbol fth, property depth of water, reference unit [ft_i], reference value 6"
+  },
+  {
+    "kind": "unit",
+    "code": "[nmi_i]",
+    "name": "nautical mile",
+    "symbol": "n.mi",
+    "property": "length",
+    "ref_unit": "m",
+    "ref_value": "1852",
+    "text": "UCUM unit [nmi_i] named nautical mile, symbol n.mi, property length, reference unit m, reference value 1852"
+  },
+  {
+    "kind": "unit",
+    "code": "[kn_i]",
+    "name": "knot",
+    "symbol": "knot",
+    "property": "velocity",
+    "ref_unit": "[nmi_i]/h",
+    "ref_value": "1",
+    "text": "UCUM unit [kn_i] named knot, symbol knot, property velocity, reference unit [nmi_i]/h, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[sin_i]",
+    "name": "square inch",
+    "symbol": "[sin_i]",
+    "property": "area",
+    "ref_unit": "[in_i]2",
+    "ref_value": "1",
+    "text": "UCUM unit [sin_i] named square inch, symbol [sin_i], property area, reference unit [in_i]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[sft_i]",
+    "name": "square foot",
+    "symbol": "[sft_i]",
+    "property": "area",
+    "ref_unit": "[ft_i]2",
+    "ref_value": "1",
+    "text": "UCUM unit [sft_i] named square foot, symbol [sft_i], property area, reference unit [ft_i]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[syd_i]",
+    "name": "square yard",
+    "symbol": "[syd_i]",
+    "property": "area",
+    "ref_unit": "[yd_i]2",
+    "ref_value": "1",
+    "text": "UCUM unit [syd_i] named square yard, symbol [syd_i], property area, reference unit [yd_i]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[cin_i]",
+    "name": "cubic inch",
+    "symbol": "[cin_i]",
+    "property": "volume",
+    "ref_unit": "[in_i]3",
+    "ref_value": "1",
+    "text": "UCUM unit [cin_i] named cubic inch, symbol [cin_i], property volume, reference unit [in_i]3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[cft_i]",
+    "name": "cubic foot",
+    "symbol": "[cft_i]",
+    "property": "volume",
+    "ref_unit": "[ft_i]3",
+    "ref_value": "1",
+    "text": "UCUM unit [cft_i] named cubic foot, symbol [cft_i], property volume, reference unit [ft_i]3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[cyd_i]",
+    "name": "cubic yard",
+    "symbol": "cu.yd",
+    "property": "volume",
+    "ref_unit": "[yd_i]3",
+    "ref_value": "1",
+    "text": "UCUM unit [cyd_i] named cubic yard, symbol cu.yd, property volume, reference unit [yd_i]3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[bf_i]",
+    "name": "board foot",
+    "symbol": "[bf_i]",
+    "property": "volume",
+    "ref_unit": "[in_i]3",
+    "ref_value": "144",
+    "text": "UCUM unit [bf_i] named board foot, symbol [bf_i], property volume, reference unit [in_i]3, reference value 144"
+  },
+  {
+    "kind": "unit",
+    "code": "[cr_i]",
+    "name": "cord",
+    "symbol": "[cr_i]",
+    "property": "volume",
+    "ref_unit": "[ft_i]3",
+    "ref_value": "128",
+    "text": "UCUM unit [cr_i] named cord, symbol [cr_i], property volume, reference unit [ft_i]3, reference value 128"
+  },
+  {
+    "kind": "unit",
+    "code": "[mil_i]",
+    "name": "mil",
+    "symbol": "mil",
+    "property": "length",
+    "ref_unit": "[in_i]",
+    "ref_value": "1e-3",
+    "text": "UCUM unit [mil_i] named mil, symbol mil, property length, reference unit [in_i], reference value 1e-3"
+  },
+  {
+    "kind": "unit",
+    "code": "[cml_i]",
+    "name": "circular mil",
+    "symbol": "circ.mil",
+    "property": "area",
+    "ref_unit": "[pi]/4.[mil_i]2",
+    "ref_value": "1",
+    "text": "UCUM unit [cml_i] named circular mil, symbol circ.mil, property area, reference unit [pi]/4.[mil_i]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[hd_i]",
+    "name": "hand",
+    "symbol": "hd",
+    "property": "height of horses",
+    "ref_unit": "[in_i]",
+    "ref_value": "4",
+    "text": "UCUM unit [hd_i] named hand, symbol hd, property height of horses, reference unit [in_i], reference value 4"
+  },
+  {
+    "kind": "unit",
+    "code": "[ft_us]",
+    "name": "foot",
+    "symbol": "ft",
+    "property": "length",
+    "ref_unit": "m/3937",
+    "ref_value": "1200",
+    "text": "UCUM unit [ft_us] named foot, symbol ft, property length, reference unit m/3937, reference value 1200"
+  },
+  {
+    "kind": "unit",
+    "code": "[yd_us]",
+    "name": "yard",
+    "symbol": "[yd_us]",
+    "property": "length",
+    "ref_unit": "[ft_us]",
+    "ref_value": "3",
+    "text": "UCUM unit [yd_us] named yard, symbol [yd_us], property length, reference unit [ft_us], reference value 3"
+  },
+  {
+    "kind": "unit",
+    "code": "[in_us]",
+    "name": "inch",
+    "symbol": "[in_us]",
+    "property": "length",
+    "ref_unit": "[ft_us]/12",
+    "ref_value": "1",
+    "text": "UCUM unit [in_us] named inch, symbol [in_us], property length, reference unit [ft_us]/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[rd_us]",
+    "name": "rod",
+    "symbol": "[rd_us]",
+    "property": "length",
+    "ref_unit": "[ft_us]",
+    "ref_value": "16.5",
+    "text": "UCUM unit [rd_us] named rod, symbol [rd_us], property length, reference unit [ft_us], reference value 16.5"
+  },
+  {
+    "kind": "unit",
+    "code": "[ch_us]",
+    "name": "Gunter's chain",
+    "symbol": "[ch_us]",
+    "property": "length",
+    "ref_unit": "[rd_us]",
+    "ref_value": "4",
+    "text": "UCUM unit [ch_us] named Gunter's chain, symbol [ch_us], property length, reference unit [rd_us], reference value 4"
+  },
+  {
+    "kind": "unit",
+    "code": "[lk_us]",
+    "name": "link for Gunter's chain",
+    "symbol": "[lk_us]",
+    "property": "length",
+    "ref_unit": "[ch_us]/100",
+    "ref_value": "1",
+    "text": "UCUM unit [lk_us] named link for Gunter's chain, symbol [lk_us], property length, reference unit [ch_us]/100, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[rch_us]",
+    "name": "Ramden's chain",
+    "symbol": "[rch_us]",
+    "property": "length",
+    "ref_unit": "[ft_us]",
+    "ref_value": "100",
+    "text": "UCUM unit [rch_us] named Ramden's chain, symbol [rch_us], property length, reference unit [ft_us], reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "[rlk_us]",
+    "name": "link for Ramden's chain",
+    "symbol": "[rlk_us]",
+    "property": "length",
+    "ref_unit": "[rch_us]/100",
+    "ref_value": "1",
+    "text": "UCUM unit [rlk_us] named link for Ramden's chain, symbol [rlk_us], property length, reference unit [rch_us]/100, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[fth_us]",
+    "name": "fathom",
+    "symbol": "[fth_us]",
+    "property": "length",
+    "ref_unit": "[ft_us]",
+    "ref_value": "6",
+    "text": "UCUM unit [fth_us] named fathom, symbol [fth_us], property length, reference unit [ft_us], reference value 6"
+  },
+  {
+    "kind": "unit",
+    "code": "[fur_us]",
+    "name": "furlong",
+    "symbol": "[fur_us]",
+    "property": "length",
+    "ref_unit": "[rd_us]",
+    "ref_value": "40",
+    "text": "UCUM unit [fur_us] named furlong, symbol [fur_us], property length, reference unit [rd_us], reference value 40"
+  },
+  {
+    "kind": "unit",
+    "code": "[mi_us]",
+    "name": "mile",
+    "symbol": "[mi_us]",
+    "property": "length",
+    "ref_unit": "[fur_us]",
+    "ref_value": "8",
+    "text": "UCUM unit [mi_us] named mile, symbol [mi_us], property length, reference unit [fur_us], reference value 8"
+  },
+  {
+    "kind": "unit",
+    "code": "[acr_us]",
+    "name": "acre",
+    "symbol": "[acr_us]",
+    "property": "area",
+    "ref_unit": "[rd_us]2",
+    "ref_value": "160",
+    "text": "UCUM unit [acr_us] named acre, symbol [acr_us], property area, reference unit [rd_us]2, reference value 160"
+  },
+  {
+    "kind": "unit",
+    "code": "[srd_us]",
+    "name": "square rod",
+    "symbol": "[srd_us]",
+    "property": "area",
+    "ref_unit": "[rd_us]2",
+    "ref_value": "1",
+    "text": "UCUM unit [srd_us] named square rod, symbol [srd_us], property area, reference unit [rd_us]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[smi_us]",
+    "name": "square mile",
+    "symbol": "[smi_us]",
+    "property": "area",
+    "ref_unit": "[mi_us]2",
+    "ref_value": "1",
+    "text": "UCUM unit [smi_us] named square mile, symbol [smi_us], property area, reference unit [mi_us]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[sct]",
+    "name": "section",
+    "symbol": "[sct]",
+    "property": "area",
+    "ref_unit": "[mi_us]2",
+    "ref_value": "1",
+    "text": "UCUM unit [sct] named section, symbol [sct], property area, reference unit [mi_us]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[twp]",
+    "name": "township",
+    "symbol": "[twp]",
+    "property": "area",
+    "ref_unit": "[sct]",
+    "ref_value": "36",
+    "text": "UCUM unit [twp] named township, symbol [twp], property area, reference unit [sct], reference value 36"
+  },
+  {
+    "kind": "unit",
+    "code": "[mil_us]",
+    "name": "mil",
+    "symbol": "[mil_us]",
+    "property": "length",
+    "ref_unit": "[in_us]",
+    "ref_value": "1e-3",
+    "text": "UCUM unit [mil_us] named mil, symbol [mil_us], property length, reference unit [in_us], reference value 1e-3"
+  },
+  {
+    "kind": "unit",
+    "code": "[in_br]",
+    "name": "inch",
+    "symbol": "[in_br]",
+    "property": "length",
+    "ref_unit": "cm",
+    "ref_value": "2.539998",
+    "text": "UCUM unit [in_br] named inch, symbol [in_br], property length, reference unit cm, reference value 2.539998"
+  },
+  {
+    "kind": "unit",
+    "code": "[ft_br]",
+    "name": "foot",
+    "symbol": "[ft_br]",
+    "property": "length",
+    "ref_unit": "[in_br]",
+    "ref_value": "12",
+    "text": "UCUM unit [ft_br] named foot, symbol [ft_br], property length, reference unit [in_br], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[rd_br]",
+    "name": "rod",
+    "symbol": "[rd_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "16.5",
+    "text": "UCUM unit [rd_br] named rod, symbol [rd_br], property length, reference unit [ft_br], reference value 16.5"
+  },
+  {
+    "kind": "unit",
+    "code": "[ch_br]",
+    "name": "Gunter's chain",
+    "symbol": "[ch_br]",
+    "property": "length",
+    "ref_unit": "[rd_br]",
+    "ref_value": "4",
+    "text": "UCUM unit [ch_br] named Gunter's chain, symbol [ch_br], property length, reference unit [rd_br], reference value 4"
+  },
+  {
+    "kind": "unit",
+    "code": "[lk_br]",
+    "name": "link for Gunter's chain",
+    "symbol": "[lk_br]",
+    "property": "length",
+    "ref_unit": "[ch_br]/100",
+    "ref_value": "1",
+    "text": "UCUM unit [lk_br] named link for Gunter's chain, symbol [lk_br], property length, reference unit [ch_br]/100, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[fth_br]",
+    "name": "fathom",
+    "symbol": "[fth_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "6",
+    "text": "UCUM unit [fth_br] named fathom, symbol [fth_br], property length, reference unit [ft_br], reference value 6"
+  },
+  {
+    "kind": "unit",
+    "code": "[pc_br]",
+    "name": "pace",
+    "symbol": "[pc_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "2.5",
+    "text": "UCUM unit [pc_br] named pace, symbol [pc_br], property length, reference unit [ft_br], reference value 2.5"
+  },
+  {
+    "kind": "unit",
+    "code": "[yd_br]",
+    "name": "yard",
+    "symbol": "[yd_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "3",
+    "text": "UCUM unit [yd_br] named yard, symbol [yd_br], property length, reference unit [ft_br], reference value 3"
+  },
+  {
+    "kind": "unit",
+    "code": "[mi_br]",
+    "name": "mile",
+    "symbol": "[mi_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "5280",
+    "text": "UCUM unit [mi_br] named mile, symbol [mi_br], property length, reference unit [ft_br], reference value 5280"
+  },
+  {
+    "kind": "unit",
+    "code": "[nmi_br]",
+    "name": "nautical mile",
+    "symbol": "[nmi_br]",
+    "property": "length",
+    "ref_unit": "[ft_br]",
+    "ref_value": "6080",
+    "text": "UCUM unit [nmi_br] named nautical mile, symbol [nmi_br], property length, reference unit [ft_br], reference value 6080"
+  },
+  {
+    "kind": "unit",
+    "code": "[kn_br]",
+    "name": "knot",
+    "symbol": "[kn_br]",
+    "property": "velocity",
+    "ref_unit": "[nmi_br]/h",
+    "ref_value": "1",
+    "text": "UCUM unit [kn_br] named knot, symbol [kn_br], property velocity, reference unit [nmi_br]/h, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[acr_br]",
+    "name": "acre",
+    "symbol": "[acr_br]",
+    "property": "area",
+    "ref_unit": "[yd_br]2",
+    "ref_value": "4840",
+    "text": "UCUM unit [acr_br] named acre, symbol [acr_br], property area, reference unit [yd_br]2, reference value 4840"
+  },
+  {
+    "kind": "unit",
+    "code": "[gal_us]",
+    "name": "Queen Anne's wine gallon",
+    "symbol": "[gal_us]",
+    "property": "fluid volume",
+    "ref_unit": "[in_i]3",
+    "ref_value": "231",
+    "text": "UCUM unit [gal_us] named Queen Anne's wine gallon, symbol [gal_us], property fluid volume, reference unit [in_i]3, reference value 231"
+  },
+  {
+    "kind": "unit",
+    "code": "[bbl_us]",
+    "name": "barrel",
+    "symbol": "[bbl_us]",
+    "property": "fluid volume",
+    "ref_unit": "[gal_us]",
+    "ref_value": "42",
+    "text": "UCUM unit [bbl_us] named barrel, symbol [bbl_us], property fluid volume, reference unit [gal_us], reference value 42"
+  },
+  {
+    "kind": "unit",
+    "code": "[qt_us]",
+    "name": "quart",
+    "symbol": "[qt_us]",
+    "property": "fluid volume",
+    "ref_unit": "[gal_us]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [qt_us] named quart, symbol [qt_us], property fluid volume, reference unit [gal_us]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pt_us]",
+    "name": "pint",
+    "symbol": "[pt_us]",
+    "property": "fluid volume",
+    "ref_unit": "[qt_us]/2",
+    "ref_value": "1",
+    "text": "UCUM unit [pt_us] named pint, symbol [pt_us], property fluid volume, reference unit [qt_us]/2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[gil_us]",
+    "name": "gill",
+    "symbol": "[gil_us]",
+    "property": "fluid volume",
+    "ref_unit": "[pt_us]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [gil_us] named gill, symbol [gil_us], property fluid volume, reference unit [pt_us]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[foz_us]",
+    "name": "fluid ounce",
+    "symbol": "oz fl",
+    "property": "fluid volume",
+    "ref_unit": "[gil_us]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [foz_us] named fluid ounce, symbol oz fl, property fluid volume, reference unit [gil_us]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[fdr_us]",
+    "name": "fluid dram",
+    "symbol": "[fdr_us]",
+    "property": "fluid volume",
+    "ref_unit": "[foz_us]/8",
+    "ref_value": "1",
+    "text": "UCUM unit [fdr_us] named fluid dram, symbol [fdr_us], property fluid volume, reference unit [foz_us]/8, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[min_us]",
+    "name": "minim",
+    "symbol": "[min_us]",
+    "property": "fluid volume",
+    "ref_unit": "[fdr_us]/60",
+    "ref_value": "1",
+    "text": "UCUM unit [min_us] named minim, symbol [min_us], property fluid volume, reference unit [fdr_us]/60, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[crd_us]",
+    "name": "cord",
+    "symbol": "[crd_us]",
+    "property": "fluid volume",
+    "ref_unit": "[ft_i]3",
+    "ref_value": "128",
+    "text": "UCUM unit [crd_us] named cord, symbol [crd_us], property fluid volume, reference unit [ft_i]3, reference value 128"
+  },
+  {
+    "kind": "unit",
+    "code": "[bu_us]",
+    "name": "bushel",
+    "symbol": "[bu_us]",
+    "property": "dry volume",
+    "ref_unit": "[in_i]3",
+    "ref_value": "2150.42",
+    "text": "UCUM unit [bu_us] named bushel, symbol [bu_us], property dry volume, reference unit [in_i]3, reference value 2150.42"
+  },
+  {
+    "kind": "unit",
+    "code": "[gal_wi]",
+    "name": "historical winchester gallon",
+    "symbol": "[gal_wi]",
+    "property": "dry volume",
+    "ref_unit": "[bu_us]/8",
+    "ref_value": "1",
+    "text": "UCUM unit [gal_wi] named historical winchester gallon, symbol [gal_wi], property dry volume, reference unit [bu_us]/8, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pk_us]",
+    "name": "peck",
+    "symbol": "[pk_us]",
+    "property": "dry volume",
+    "ref_unit": "[bu_us]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [pk_us] named peck, symbol [pk_us], property dry volume, reference unit [bu_us]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[dqt_us]",
+    "name": "dry quart",
+    "symbol": "[dqt_us]",
+    "property": "dry volume",
+    "ref_unit": "[pk_us]/8",
+    "ref_value": "1",
+    "text": "UCUM unit [dqt_us] named dry quart, symbol [dqt_us], property dry volume, reference unit [pk_us]/8, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[dpt_us]",
+    "name": "dry pint",
+    "symbol": "[dpt_us]",
+    "property": "dry volume",
+    "ref_unit": "[dqt_us]/2",
+    "ref_value": "1",
+    "text": "UCUM unit [dpt_us] named dry pint, symbol [dpt_us], property dry volume, reference unit [dqt_us]/2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[tbs_us]",
+    "name": "tablespoon",
+    "symbol": "[tbs_us]",
+    "property": "volume",
+    "ref_unit": "[foz_us]/2",
+    "ref_value": "1",
+    "text": "UCUM unit [tbs_us] named tablespoon, symbol [tbs_us], property volume, reference unit [foz_us]/2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[tsp_us]",
+    "name": "teaspoon",
+    "symbol": "[tsp_us]",
+    "property": "volume",
+    "ref_unit": "[tbs_us]/3",
+    "ref_value": "1",
+    "text": "UCUM unit [tsp_us] named teaspoon, symbol [tsp_us], property volume, reference unit [tbs_us]/3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[cup_us]",
+    "name": "cup",
+    "symbol": "[cup_us]",
+    "property": "volume",
+    "ref_unit": "[tbs_us]",
+    "ref_value": "16",
+    "text": "UCUM unit [cup_us] named cup, symbol [cup_us], property volume, reference unit [tbs_us], reference value 16"
+  },
+  {
+    "kind": "unit",
+    "code": "[foz_m]",
+    "name": "metric fluid ounce",
+    "symbol": "oz fl",
+    "property": "fluid volume",
+    "ref_unit": "mL",
+    "ref_value": "30",
+    "text": "UCUM unit [foz_m] named metric fluid ounce, symbol oz fl, property fluid volume, reference unit mL, reference value 30"
+  },
+  {
+    "kind": "unit",
+    "code": "[cup_m]",
+    "name": "metric cup",
+    "symbol": "[cup_m]",
+    "property": "volume",
+    "ref_unit": "mL",
+    "ref_value": "240",
+    "text": "UCUM unit [cup_m] named metric cup, symbol [cup_m], property volume, reference unit mL, reference value 240"
+  },
+  {
+    "kind": "unit",
+    "code": "[tsp_m]",
+    "name": "metric teaspoon",
+    "symbol": "[tsp_m]",
+    "property": "volume",
+    "ref_unit": "mL",
+    "ref_value": "5",
+    "text": "UCUM unit [tsp_m] named metric teaspoon, symbol [tsp_m], property volume, reference unit mL, reference value 5"
+  },
+  {
+    "kind": "unit",
+    "code": "[tbs_m]",
+    "name": "metric tablespoon",
+    "symbol": "[tbs_m]",
+    "property": "volume",
+    "ref_unit": "mL",
+    "ref_value": "15",
+    "text": "UCUM unit [tbs_m] named metric tablespoon, symbol [tbs_m], property volume, reference unit mL, reference value 15"
+  },
+  {
+    "kind": "unit",
+    "code": "[gal_br]",
+    "name": "gallon",
+    "symbol": "[gal_br]",
+    "property": "volume",
+    "ref_unit": "l",
+    "ref_value": "4.54609",
+    "text": "UCUM unit [gal_br] named gallon, symbol [gal_br], property volume, reference unit l, reference value 4.54609"
+  },
+  {
+    "kind": "unit",
+    "code": "[pk_br]",
+    "name": "peck",
+    "symbol": "[pk_br]",
+    "property": "volume",
+    "ref_unit": "[gal_br]",
+    "ref_value": "2",
+    "text": "UCUM unit [pk_br] named peck, symbol [pk_br], property volume, reference unit [gal_br], reference value 2"
+  },
+  {
+    "kind": "unit",
+    "code": "[bu_br]",
+    "name": "bushel",
+    "symbol": "[bu_br]",
+    "property": "volume",
+    "ref_unit": "[pk_br]",
+    "ref_value": "4",
+    "text": "UCUM unit [bu_br] named bushel, symbol [bu_br], property volume, reference unit [pk_br], reference value 4"
+  },
+  {
+    "kind": "unit",
+    "code": "[qt_br]",
+    "name": "quart",
+    "symbol": "[qt_br]",
+    "property": "volume",
+    "ref_unit": "[gal_br]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [qt_br] named quart, symbol [qt_br], property volume, reference unit [gal_br]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pt_br]",
+    "name": "pint",
+    "symbol": "[pt_br]",
+    "property": "volume",
+    "ref_unit": "[qt_br]/2",
+    "ref_value": "1",
+    "text": "UCUM unit [pt_br] named pint, symbol [pt_br], property volume, reference unit [qt_br]/2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[gil_br]",
+    "name": "gill",
+    "symbol": "[gil_br]",
+    "property": "volume",
+    "ref_unit": "[pt_br]/4",
+    "ref_value": "1",
+    "text": "UCUM unit [gil_br] named gill, symbol [gil_br], property volume, reference unit [pt_br]/4, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[foz_br]",
+    "name": "fluid ounce",
+    "symbol": "[foz_br]",
+    "property": "volume",
+    "ref_unit": "[gil_br]/5",
+    "ref_value": "1",
+    "text": "UCUM unit [foz_br] named fluid ounce, symbol [foz_br], property volume, reference unit [gil_br]/5, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[fdr_br]",
+    "name": "fluid dram",
+    "symbol": "[fdr_br]",
+    "property": "volume",
+    "ref_unit": "[foz_br]/8",
+    "ref_value": "1",
+    "text": "UCUM unit [fdr_br] named fluid dram, symbol [fdr_br], property volume, reference unit [foz_br]/8, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[min_br]",
+    "name": "minim",
+    "symbol": "[min_br]",
+    "property": "volume",
+    "ref_unit": "[fdr_br]/60",
+    "ref_value": "1",
+    "text": "UCUM unit [min_br] named minim, symbol [min_br], property volume, reference unit [fdr_br]/60, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[gr]",
+    "name": "grain",
+    "symbol": "[gr]",
+    "property": "mass",
+    "ref_unit": "mg",
+    "ref_value": "64.79891",
+    "text": "UCUM unit [gr] named grain, symbol [gr], property mass, reference unit mg, reference value 64.79891"
+  },
+  {
+    "kind": "unit",
+    "code": "[lb_av]",
+    "name": "pound",
+    "symbol": "lb",
+    "property": "mass",
+    "ref_unit": "[gr]",
+    "ref_value": "7000",
+    "text": "UCUM unit [lb_av] named pound, symbol lb, property mass, reference unit [gr], reference value 7000"
+  },
+  {
+    "kind": "unit",
+    "code": "[oz_av]",
+    "name": "ounce",
+    "symbol": "oz",
+    "property": "mass",
+    "ref_unit": "[lb_av]/16",
+    "ref_value": "1",
+    "text": "UCUM unit [oz_av] named ounce, symbol oz, property mass, reference unit [lb_av]/16, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[dr_av]",
+    "name": "dram",
+    "symbol": "[dr_av]",
+    "property": "mass",
+    "ref_unit": "[oz_av]/16",
+    "ref_value": "1",
+    "text": "UCUM unit [dr_av] named dram, symbol [dr_av], property mass, reference unit [oz_av]/16, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[scwt_av]",
+    "name": "short hundredweight",
+    "symbol": "[scwt_av]",
+    "property": "mass",
+    "ref_unit": "[lb_av]",
+    "ref_value": "100",
+    "text": "UCUM unit [scwt_av] named short hundredweight, symbol [scwt_av], property mass, reference unit [lb_av], reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "[lcwt_av]",
+    "name": "long hundredweight",
+    "symbol": "[lcwt_av]",
+    "property": "mass",
+    "ref_unit": "[lb_av]",
+    "ref_value": "112",
+    "text": "UCUM unit [lcwt_av] named long hundredweight, symbol [lcwt_av], property mass, reference unit [lb_av], reference value 112"
+  },
+  {
+    "kind": "unit",
+    "code": "[ston_av]",
+    "name": "short ton",
+    "symbol": "[ston_av]",
+    "property": "mass",
+    "ref_unit": "[scwt_av]",
+    "ref_value": "20",
+    "text": "UCUM unit [ston_av] named short ton, symbol [ston_av], property mass, reference unit [scwt_av], reference value 20"
+  },
+  {
+    "kind": "unit",
+    "code": "[lton_av]",
+    "name": "long ton",
+    "symbol": "[lton_av]",
+    "property": "mass",
+    "ref_unit": "[lcwt_av]",
+    "ref_value": "20",
+    "text": "UCUM unit [lton_av] named long ton, symbol [lton_av], property mass, reference unit [lcwt_av], reference value 20"
+  },
+  {
+    "kind": "unit",
+    "code": "[stone_av]",
+    "name": "stone",
+    "symbol": "[stone_av]",
+    "property": "mass",
+    "ref_unit": "[lb_av]",
+    "ref_value": "14",
+    "text": "UCUM unit [stone_av] named stone, symbol [stone_av], property mass, reference unit [lb_av], reference value 14"
+  },
+  {
+    "kind": "unit",
+    "code": "[pwt_tr]",
+    "name": "pennyweight",
+    "symbol": "[pwt_tr]",
+    "property": "mass",
+    "ref_unit": "[gr]",
+    "ref_value": "24",
+    "text": "UCUM unit [pwt_tr] named pennyweight, symbol [pwt_tr], property mass, reference unit [gr], reference value 24"
+  },
+  {
+    "kind": "unit",
+    "code": "[oz_tr]",
+    "name": "ounce",
+    "symbol": "[oz_tr]",
+    "property": "mass",
+    "ref_unit": "[pwt_tr]",
+    "ref_value": "20",
+    "text": "UCUM unit [oz_tr] named ounce, symbol [oz_tr], property mass, reference unit [pwt_tr], reference value 20"
+  },
+  {
+    "kind": "unit",
+    "code": "[lb_tr]",
+    "name": "pound",
+    "symbol": "[lb_tr]",
+    "property": "mass",
+    "ref_unit": "[oz_tr]",
+    "ref_value": "12",
+    "text": "UCUM unit [lb_tr] named pound, symbol [lb_tr], property mass, reference unit [oz_tr], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[sc_ap]",
+    "name": "scruple",
+    "symbol": "[sc_ap]",
+    "property": "mass",
+    "ref_unit": "[gr]",
+    "ref_value": "20",
+    "text": "UCUM unit [sc_ap] named scruple, symbol [sc_ap], property mass, reference unit [gr], reference value 20"
+  },
+  {
+    "kind": "unit",
+    "code": "[dr_ap]",
+    "name": "dram",
+    "symbol": "[dr_ap]",
+    "property": "mass",
+    "ref_unit": "[sc_ap]",
+    "ref_value": "3",
+    "text": "UCUM unit [dr_ap] named dram, symbol [dr_ap], property mass, reference unit [sc_ap], reference value 3"
+  },
+  {
+    "kind": "unit",
+    "code": "[oz_ap]",
+    "name": "ounce",
+    "symbol": "[oz_ap]",
+    "property": "mass",
+    "ref_unit": "[dr_ap]",
+    "ref_value": "8",
+    "text": "UCUM unit [oz_ap] named ounce, symbol [oz_ap], property mass, reference unit [dr_ap], reference value 8"
+  },
+  {
+    "kind": "unit",
+    "code": "[lb_ap]",
+    "name": "pound",
+    "symbol": "[lb_ap]",
+    "property": "mass",
+    "ref_unit": "[oz_ap]",
+    "ref_value": "12",
+    "text": "UCUM unit [lb_ap] named pound, symbol [lb_ap], property mass, reference unit [oz_ap], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[oz_m]",
+    "name": "metric ounce",
+    "symbol": "[oz_m]",
+    "property": "mass",
+    "ref_unit": "g",
+    "ref_value": "28",
+    "text": "UCUM unit [oz_m] named metric ounce, symbol [oz_m], property mass, reference unit g, reference value 28"
+  },
+  {
+    "kind": "unit",
+    "code": "[lne]",
+    "name": "line",
+    "symbol": "[lne]",
+    "property": "length",
+    "ref_unit": "[in_i]/12",
+    "ref_value": "1",
+    "text": "UCUM unit [lne] named line, symbol [lne], property length, reference unit [in_i]/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pnt]",
+    "name": "point",
+    "symbol": "[pnt]",
+    "property": "length",
+    "ref_unit": "[lne]/6",
+    "ref_value": "1",
+    "text": "UCUM unit [pnt] named point, symbol [pnt], property length, reference unit [lne]/6, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pca]",
+    "name": "pica",
+    "symbol": "[pca]",
+    "property": "length",
+    "ref_unit": "[pnt]",
+    "ref_value": "12",
+    "text": "UCUM unit [pca] named pica, symbol [pca], property length, reference unit [pnt], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[pnt_pr]",
+    "name": "Printer's point",
+    "symbol": "[pnt_pr]",
+    "property": "length",
+    "ref_unit": "[in_i]",
+    "ref_value": "0.013837",
+    "text": "UCUM unit [pnt_pr] named Printer's point, symbol [pnt_pr], property length, reference unit [in_i], reference value 0.013837"
+  },
+  {
+    "kind": "unit",
+    "code": "[pca_pr]",
+    "name": "Printer's pica",
+    "symbol": "[pca_pr]",
+    "property": "length",
+    "ref_unit": "[pnt_pr]",
+    "ref_value": "12",
+    "text": "UCUM unit [pca_pr] named Printer's pica, symbol [pca_pr], property length, reference unit [pnt_pr], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[pied]",
+    "name": "pied",
+    "symbol": "[pied]",
+    "property": "length",
+    "ref_unit": "cm",
+    "ref_value": "32.48",
+    "text": "UCUM unit [pied] named pied, symbol [pied], property length, reference unit cm, reference value 32.48"
+  },
+  {
+    "kind": "unit",
+    "code": "[pouce]",
+    "name": "pouce",
+    "symbol": "[pouce]",
+    "property": "length",
+    "ref_unit": "[pied]/12",
+    "ref_value": "1",
+    "text": "UCUM unit [pouce] named pouce, symbol [pouce], property length, reference unit [pied]/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ligne]",
+    "name": "ligne",
+    "symbol": "[ligne]",
+    "property": "length",
+    "ref_unit": "[pouce]/12",
+    "ref_value": "1",
+    "text": "UCUM unit [ligne] named ligne, symbol [ligne], property length, reference unit [pouce]/12, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[didot]",
+    "name": "didot",
+    "symbol": "[didot]",
+    "property": "length",
+    "ref_unit": "[ligne]/6",
+    "ref_value": "1",
+    "text": "UCUM unit [didot] named didot, symbol [didot], property length, reference unit [ligne]/6, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[cicero]",
+    "name": "cicero",
+    "symbol": "[cicero]",
+    "property": "length",
+    "ref_unit": "[didot]",
+    "ref_value": "12",
+    "text": "UCUM unit [cicero] named cicero, symbol [cicero], property length, reference unit [didot], reference value 12"
+  },
+  {
+    "kind": "unit",
+    "code": "[degF]",
+    "name": "degree Fahrenheit",
+    "symbol": "°F",
+    "property": "temperature",
+    "ref_unit": "degf(5 K/9)",
+    "ref_value": "",
+    "text": "UCUM unit [degF] named degree Fahrenheit, symbol °F, property temperature, reference unit degf(5 K/9), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[degR]",
+    "name": "degree Rankine",
+    "symbol": "°R",
+    "property": "temperature",
+    "ref_unit": "K/9",
+    "ref_value": "5",
+    "text": "UCUM unit [degR] named degree Rankine, symbol °R, property temperature, reference unit K/9, reference value 5"
+  },
+  {
+    "kind": "unit",
+    "code": "[degRe]",
+    "name": "degree Réaumur",
+    "symbol": "°Ré",
+    "property": "temperature",
+    "ref_unit": "degre(5 K/4)",
+    "ref_value": "",
+    "text": "UCUM unit [degRe] named degree Réaumur, symbol °Ré, property temperature, reference unit degre(5 K/4), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "cal_[15]",
+    "name": "calorie at 15 °C",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "J",
+    "ref_value": "4.18580",
+    "text": "UCUM unit cal_[15] named calorie at 15 °C, symbol cal, property energy, reference unit J, reference value 4.18580"
+  },
+  {
+    "kind": "unit",
+    "code": "cal_[20]",
+    "name": "calorie at 20 °C",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "J",
+    "ref_value": "4.18190",
+    "text": "UCUM unit cal_[20] named calorie at 20 °C, symbol cal, property energy, reference unit J, reference value 4.18190"
+  },
+  {
+    "kind": "unit",
+    "code": "cal_m",
+    "name": "mean calorie",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "J",
+    "ref_value": "4.19002",
+    "text": "UCUM unit cal_m named mean calorie, symbol cal, property energy, reference unit J, reference value 4.19002"
+  },
+  {
+    "kind": "unit",
+    "code": "cal_IT",
+    "name": "international table calorie",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "J",
+    "ref_value": "4.1868",
+    "text": "UCUM unit cal_IT named international table calorie, symbol cal, property energy, reference unit J, reference value 4.1868"
+  },
+  {
+    "kind": "unit",
+    "code": "cal_th",
+    "name": "thermochemical calorie",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "J",
+    "ref_value": "4.184",
+    "text": "UCUM unit cal_th named thermochemical calorie, symbol cal, property energy, reference unit J, reference value 4.184"
+  },
+  {
+    "kind": "unit",
+    "code": "cal",
+    "name": "calorie",
+    "symbol": "cal",
+    "property": "energy",
+    "ref_unit": "cal_th",
+    "ref_value": "1",
+    "text": "UCUM unit cal named calorie, symbol cal, property energy, reference unit cal_th, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[Cal]",
+    "name": "nutrition label Calories",
+    "symbol": "Cal",
+    "property": "energy",
+    "ref_unit": "kcal_th",
+    "ref_value": "1",
+    "text": "UCUM unit [Cal] named nutrition label Calories, symbol Cal, property energy, reference unit kcal_th, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_39]",
+    "name": "British thermal unit at 39 °F",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.05967",
+    "text": "UCUM unit [Btu_39] named British thermal unit at 39 °F, symbol Btu, property energy, reference unit kJ, reference value 1.05967"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_59]",
+    "name": "British thermal unit at 59 °F",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.05480",
+    "text": "UCUM unit [Btu_59] named British thermal unit at 59 °F, symbol Btu, property energy, reference unit kJ, reference value 1.05480"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_60]",
+    "name": "British thermal unit at 60 °F",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.05468",
+    "text": "UCUM unit [Btu_60] named British thermal unit at 60 °F, symbol Btu, property energy, reference unit kJ, reference value 1.05468"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_m]",
+    "name": "mean British thermal unit",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.05587",
+    "text": "UCUM unit [Btu_m] named mean British thermal unit, symbol Btu, property energy, reference unit kJ, reference value 1.05587"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_IT]",
+    "name": "international table British thermal unit",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.05505585262",
+    "text": "UCUM unit [Btu_IT] named international table British thermal unit, symbol Btu, property energy, reference unit kJ, reference value 1.05505585262"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu_th]",
+    "name": "thermochemical British thermal unit",
+    "symbol": "Btu",
+    "property": "energy",
+    "ref_unit": "kJ",
+    "ref_value": "1.054350",
+    "text": "UCUM unit [Btu_th] named thermochemical British thermal unit, symbol Btu, property energy, reference unit kJ, reference value 1.054350"
+  },
+  {
+    "kind": "unit",
+    "code": "[Btu]",
+    "name": "British thermal unit",
+    "symbol": "btu",
+    "property": "energy",
+    "ref_unit": "[Btu_th]",
+    "ref_value": "1",
+    "text": "UCUM unit [Btu] named British thermal unit, symbol btu, property energy, reference unit [Btu_th], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[HP]",
+    "name": "horsepower",
+    "symbol": "[HP]",
+    "property": "power",
+    "ref_unit": "[ft_i].[lbf_av]/s",
+    "ref_value": "550",
+    "text": "UCUM unit [HP] named horsepower, symbol [HP], property power, reference unit [ft_i].[lbf_av]/s, reference value 550"
+  },
+  {
+    "kind": "unit",
+    "code": "tex",
+    "name": "tex",
+    "symbol": "tex",
+    "property": "linear mass density (of textile thread)",
+    "ref_unit": "g/km",
+    "ref_value": "1",
+    "text": "UCUM unit tex named tex, symbol tex, property linear mass density (of textile thread), reference unit g/km, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[den]",
+    "name": "Denier",
+    "symbol": "den",
+    "property": "linear mass density (of textile thread)",
+    "ref_unit": "g/9/km",
+    "ref_value": "1",
+    "text": "UCUM unit [den] named Denier, symbol den, property linear mass density (of textile thread), reference unit g/9/km, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "m[H2O]",
+    "name": "meter of water column",
+    "symbol": "m H",
+    "property": "pressure",
+    "ref_unit": "kPa",
+    "ref_value": "980665e-5",
+    "text": "UCUM unit m[H2O] named meter of water column, symbol m H, property pressure, reference unit kPa, reference value 980665e-5"
+  },
+  {
+    "kind": "unit",
+    "code": "m[Hg]",
+    "name": "meter of mercury column",
+    "symbol": "m Hg",
+    "property": "pressure",
+    "ref_unit": "kPa",
+    "ref_value": "133.3220",
+    "text": "UCUM unit m[Hg] named meter of mercury column, symbol m Hg, property pressure, reference unit kPa, reference value 133.3220"
+  },
+  {
+    "kind": "unit",
+    "code": "[in_i'H2O]",
+    "name": "inch of water column",
+    "symbol": "in H",
+    "property": "pressure",
+    "ref_unit": "m[H2O].[in_i]/m",
+    "ref_value": "1",
+    "text": "UCUM unit [in_i'H2O] named inch of water column, symbol in H, property pressure, reference unit m[H2O].[in_i]/m, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[in_i'Hg]",
+    "name": "inch of mercury column",
+    "symbol": "in Hg",
+    "property": "pressure",
+    "ref_unit": "m[Hg].[in_i]/m",
+    "ref_value": "1",
+    "text": "UCUM unit [in_i'Hg] named inch of mercury column, symbol in Hg, property pressure, reference unit m[Hg].[in_i]/m, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[PRU]",
+    "name": "peripheral vascular resistance unit",
+    "symbol": "P.R.U.",
+    "property": "fluid resistance",
+    "ref_unit": "mm[Hg].s/ml",
+    "ref_value": "1",
+    "text": "UCUM unit [PRU] named peripheral vascular resistance unit, symbol P.R.U., property fluid resistance, reference unit mm[Hg].s/ml, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[wood'U]",
+    "name": "Wood unit",
+    "symbol": "Wood U.",
+    "property": "fluid resistance",
+    "ref_unit": "mm[Hg].min/L",
+    "ref_value": "1",
+    "text": "UCUM unit [wood'U] named Wood unit, symbol Wood U., property fluid resistance, reference unit mm[Hg].min/L, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[diop]",
+    "name": "diopter",
+    "symbol": "dpt",
+    "property": "refraction of a lens",
+    "ref_unit": "/m",
+    "ref_value": "1",
+    "text": "UCUM unit [diop] named diopter, symbol dpt, property refraction of a lens, reference unit /m, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[p'diop]",
+    "name": "prism diopter",
+    "symbol": "PD",
+    "property": "refraction of a prism",
+    "ref_unit": "100tan(1 rad)",
+    "ref_value": "",
+    "text": "UCUM unit [p'diop] named prism diopter, symbol PD, property refraction of a prism, reference unit 100tan(1 rad), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "%[slope]",
+    "name": "percent of slope",
+    "symbol": "%",
+    "property": "slope",
+    "ref_unit": "100tan(1 rad)",
+    "ref_value": "",
+    "text": "UCUM unit %[slope] named percent of slope, symbol %, property slope, reference unit 100tan(1 rad), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[mesh_i]",
+    "name": "mesh",
+    "symbol": "[mesh_i]",
+    "property": "lineic number",
+    "ref_unit": "/[in_i]",
+    "ref_value": "1",
+    "text": "UCUM unit [mesh_i] named mesh, symbol [mesh_i], property lineic number, reference unit /[in_i], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[Ch]",
+    "name": "Charrière",
+    "symbol": "Ch",
+    "property": "gauge of catheters",
+    "ref_unit": "mm/3",
+    "ref_value": "1",
+    "text": "UCUM unit [Ch] named Charrière, symbol Ch, property gauge of catheters, reference unit mm/3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[drp]",
+    "name": "drop",
+    "symbol": "drp",
+    "property": "volume",
+    "ref_unit": "ml/20",
+    "ref_value": "1",
+    "text": "UCUM unit [drp] named drop, symbol drp, property volume, reference unit ml/20, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[hnsf'U]",
+    "name": "Hounsfield unit",
+    "symbol": "HF",
+    "property": "x-ray attenuation",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [hnsf'U] named Hounsfield unit, symbol HF, property x-ray attenuation, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[MET]",
+    "name": "metabolic equivalent",
+    "symbol": "MET",
+    "property": "metabolic cost of physical activity",
+    "ref_unit": "mL/min/kg",
+    "ref_value": "3.5",
+    "text": "UCUM unit [MET] named metabolic equivalent, symbol MET, property metabolic cost of physical activity, reference unit mL/min/kg, reference value 3.5"
+  },
+  {
+    "kind": "unit",
+    "code": "[hp'_X]",
+    "name": "homeopathic potency of decimal series (retired)",
+    "symbol": "X",
+    "property": "homeopathic potency (retired)",
+    "ref_unit": "hpX(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit [hp'_X] named homeopathic potency of decimal series (retired), symbol X, property homeopathic potency (retired), reference unit hpX(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[hp'_C]",
+    "name": "homeopathic potency of centesimal series (retired)",
+    "symbol": "C",
+    "property": "homeopathic potency (retired)",
+    "ref_unit": "hpC(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit [hp'_C] named homeopathic potency of centesimal series (retired), symbol C, property homeopathic potency (retired), reference unit hpC(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[hp'_M]",
+    "name": "homeopathic potency of millesimal series (retired)",
+    "symbol": "M",
+    "property": "homeopathic potency (retired)",
+    "ref_unit": "hpM(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit [hp'_M] named homeopathic potency of millesimal series (retired), symbol M, property homeopathic potency (retired), reference unit hpM(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[hp'_Q]",
+    "name": "homeopathic potency of quintamillesimal series (retired)",
+    "symbol": "Q",
+    "property": "homeopathic potency (retired)",
+    "ref_unit": "hpQ(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit [hp'_Q] named homeopathic potency of quintamillesimal series (retired), symbol Q, property homeopathic potency (retired), reference unit hpQ(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[hp_X]",
+    "name": "homeopathic potency of decimal hahnemannian series",
+    "symbol": "X",
+    "property": "homeopathic potency (Hahnemann)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [hp_X] named homeopathic potency of decimal hahnemannian series, symbol X, property homeopathic potency (Hahnemann), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[hp_C]",
+    "name": "homeopathic potency of centesimal hahnemannian series",
+    "symbol": "C",
+    "property": "homeopathic potency (Hahnemann)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [hp_C] named homeopathic potency of centesimal hahnemannian series, symbol C, property homeopathic potency (Hahnemann), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[hp_M]",
+    "name": "homeopathic potency of millesimal hahnemannian series",
+    "symbol": "M",
+    "property": "homeopathic potency (Hahnemann)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [hp_M] named homeopathic potency of millesimal hahnemannian series, symbol M, property homeopathic potency (Hahnemann), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[hp_Q]",
+    "name": "homeopathic potency of quintamillesimal hahnemannian series",
+    "symbol": "Q",
+    "property": "homeopathic potency (Hahnemann)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [hp_Q] named homeopathic potency of quintamillesimal hahnemannian series, symbol Q, property homeopathic potency (Hahnemann), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[kp_X]",
+    "name": "homeopathic potency of decimal korsakovian series",
+    "symbol": "X",
+    "property": "homeopathic potency (Korsakov)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [kp_X] named homeopathic potency of decimal korsakovian series, symbol X, property homeopathic potency (Korsakov), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[kp_C]",
+    "name": "homeopathic potency of centesimal korsakovian series",
+    "symbol": "C",
+    "property": "homeopathic potency (Korsakov)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [kp_C] named homeopathic potency of centesimal korsakovian series, symbol C, property homeopathic potency (Korsakov), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[kp_M]",
+    "name": "homeopathic potency of millesimal korsakovian series",
+    "symbol": "M",
+    "property": "homeopathic potency (Korsakov)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [kp_M] named homeopathic potency of millesimal korsakovian series, symbol M, property homeopathic potency (Korsakov), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[kp_Q]",
+    "name": "homeopathic potency of quintamillesimal korsakovian series",
+    "symbol": "Q",
+    "property": "homeopathic potency (Korsakov)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [kp_Q] named homeopathic potency of quintamillesimal korsakovian series, symbol Q, property homeopathic potency (Korsakov), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "eq",
+    "name": "equivalents",
+    "symbol": "eq",
+    "property": "amount of substance",
+    "ref_unit": "mol",
+    "ref_value": "1",
+    "text": "UCUM unit eq named equivalents, symbol eq, property amount of substance, reference unit mol, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "osm",
+    "name": "osmole",
+    "symbol": "osm",
+    "property": "amount of substance (dissolved particles)",
+    "ref_unit": "mol",
+    "ref_value": "1",
+    "text": "UCUM unit osm named osmole, symbol osm, property amount of substance (dissolved particles), reference unit mol, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[pH]",
+    "name": "pH",
+    "symbol": "pH",
+    "property": "acidity",
+    "ref_unit": "pH(1 mol/l)",
+    "ref_value": "",
+    "text": "UCUM unit [pH] named pH, symbol pH, property acidity, reference unit pH(1 mol/l), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "g%",
+    "name": "gram percent",
+    "symbol": "g%",
+    "property": "mass concentration",
+    "ref_unit": "g/dl",
+    "ref_value": "1",
+    "text": "UCUM unit g% named gram percent, symbol g%, property mass concentration, reference unit g/dl, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[S]",
+    "name": "Svedberg unit",
+    "symbol": "S",
+    "property": "sedimentation coefficient",
+    "ref_unit": "10*-13.s",
+    "ref_value": "1",
+    "text": "UCUM unit [S] named Svedberg unit, symbol S, property sedimentation coefficient, reference unit 10*-13.s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[HPF]",
+    "name": "high power field",
+    "symbol": "HPF",
+    "property": "view area in microscope",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [HPF] named high power field, symbol HPF, property view area in microscope, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[LPF]",
+    "name": "low power field",
+    "symbol": "LPF",
+    "property": "view area in microscope",
+    "ref_unit": "1",
+    "ref_value": "100",
+    "text": "UCUM unit [LPF] named low power field, symbol LPF, property view area in microscope, reference unit 1, reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "kat",
+    "name": "katal",
+    "symbol": "kat",
+    "property": "catalytic activity",
+    "ref_unit": "mol/s",
+    "ref_value": "1",
+    "text": "UCUM unit kat named katal, symbol kat, property catalytic activity, reference unit mol/s, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "U",
+    "name": "Unit",
+    "symbol": "U",
+    "property": "catalytic activity",
+    "ref_unit": "umol/min",
+    "ref_value": "1",
+    "text": "UCUM unit U named Unit, symbol U, property catalytic activity, reference unit umol/min, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[iU]",
+    "name": "international unit",
+    "symbol": "IU",
+    "property": "arbitrary",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [iU] named international unit, symbol IU, property arbitrary, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[IU]",
+    "name": "international unit",
+    "symbol": "i.U.",
+    "property": "arbitrary",
+    "ref_unit": "[iU]",
+    "ref_value": "1",
+    "text": "UCUM unit [IU] named international unit, symbol i.U., property arbitrary, reference unit [iU], reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[arb'U]",
+    "name": "arbitrary unit",
+    "symbol": "arb. U",
+    "property": "arbitrary",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [arb'U] named arbitrary unit, symbol arb. U, property arbitrary, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[USP'U]",
+    "name": "United States Pharmacopeia unit",
+    "symbol": "U.S.P.",
+    "property": "arbitrary",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [USP'U] named United States Pharmacopeia unit, symbol U.S.P., property arbitrary, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[GPL'U]",
+    "name": "GPL unit",
+    "symbol": "[GPL'U]",
+    "property": "biologic activity of anticardiolipin IgG",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [GPL'U] named GPL unit, symbol [GPL'U], property biologic activity of anticardiolipin IgG, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[MPL'U]",
+    "name": "MPL unit",
+    "symbol": "[MPL'U]",
+    "property": "biologic activity of anticardiolipin IgM",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [MPL'U] named MPL unit, symbol [MPL'U], property biologic activity of anticardiolipin IgM, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[APL'U]",
+    "name": "APL unit",
+    "symbol": "[APL'U]",
+    "property": "biologic activity of anticardiolipin IgA",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [APL'U] named APL unit, symbol [APL'U], property biologic activity of anticardiolipin IgA, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[beth'U]",
+    "name": "Bethesda unit",
+    "symbol": "[beth'U]",
+    "property": "biologic activity of factor VIII inhibitor",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [beth'U] named Bethesda unit, symbol [beth'U], property biologic activity of factor VIII inhibitor, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[anti'Xa'U]",
+    "name": "anti factor Xa unit",
+    "symbol": "[anti'Xa'U]",
+    "property": "biologic activity of factor Xa inhibitor (heparin)",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [anti'Xa'U] named anti factor Xa unit, symbol [anti'Xa'U], property biologic activity of factor Xa inhibitor (heparin), reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[todd'U]",
+    "name": "Todd unit",
+    "symbol": "[todd'U]",
+    "property": "biologic activity antistreptolysin O",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [todd'U] named Todd unit, symbol [todd'U], property biologic activity antistreptolysin O, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[dye'U]",
+    "name": "Dye unit",
+    "symbol": "[dye'U]",
+    "property": "biologic activity of amylase",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [dye'U] named Dye unit, symbol [dye'U], property biologic activity of amylase, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[smgy'U]",
+    "name": "Somogyi unit",
+    "symbol": "[smgy'U]",
+    "property": "biologic activity of amylase",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [smgy'U] named Somogyi unit, symbol [smgy'U], property biologic activity of amylase, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[bdsk'U]",
+    "name": "Bodansky unit",
+    "symbol": "[bdsk'U]",
+    "property": "biologic activity of phosphatase",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [bdsk'U] named Bodansky unit, symbol [bdsk'U], property biologic activity of phosphatase, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ka'U]",
+    "name": "King-Armstrong unit",
+    "symbol": "[ka'U]",
+    "property": "biologic activity of phosphatase",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [ka'U] named King-Armstrong unit, symbol [ka'U], property biologic activity of phosphatase, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[knk'U]",
+    "name": "Kunkel unit",
+    "symbol": "[knk'U]",
+    "property": "arbitrary biologic activity",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [knk'U] named Kunkel unit, symbol [knk'U], property arbitrary biologic activity, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[mclg'U]",
+    "name": "Mac Lagan unit",
+    "symbol": "[mclg'U]",
+    "property": "arbitrary biologic activity",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [mclg'U] named Mac Lagan unit, symbol [mclg'U], property arbitrary biologic activity, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[tb'U]",
+    "name": "tuberculin unit",
+    "symbol": "[tb'U]",
+    "property": "biologic activity of tuberculin",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [tb'U] named tuberculin unit, symbol [tb'U], property biologic activity of tuberculin, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[CCID_50]",
+    "name": "50% cell culture infectious dose",
+    "symbol": "CCID",
+    "property": "biologic activity (infectivity) of an infectious agent preparation",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [CCID_50] named 50% cell culture infectious dose, symbol CCID, property biologic activity (infectivity) of an infectious agent preparation, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[TCID_50]",
+    "name": "50% tissue culture infectious dose",
+    "symbol": "TCID",
+    "property": "biologic activity (infectivity) of an infectious agent preparation",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [TCID_50] named 50% tissue culture infectious dose, symbol TCID, property biologic activity (infectivity) of an infectious agent preparation, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[EID_50]",
+    "name": "50% embryo infectious dose",
+    "symbol": "EID",
+    "property": "biologic activity (infectivity) of an infectious agent preparation",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [EID_50] named 50% embryo infectious dose, symbol EID, property biologic activity (infectivity) of an infectious agent preparation, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[PFU]",
+    "name": "plaque forming units",
+    "symbol": "PFU",
+    "property": "amount of an infectious agent",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [PFU] named plaque forming units, symbol PFU, property amount of an infectious agent, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[FFU]",
+    "name": "focus forming units",
+    "symbol": "FFU",
+    "property": "amount of an infectious agent",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [FFU] named focus forming units, symbol FFU, property amount of an infectious agent, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[CFU]",
+    "name": "colony forming units",
+    "symbol": "CFU",
+    "property": "amount of a proliferating organism",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [CFU] named colony forming units, symbol CFU, property amount of a proliferating organism, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[IR]",
+    "name": "index of reactivity",
+    "symbol": "IR",
+    "property": "amount of an allergen calibrated through in-vivo testing using the Stallergenes® method",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [IR] named index of reactivity, symbol IR, property amount of an allergen calibrated through in-vivo testing using the Stallergenes® method, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[BAU]",
+    "name": "bioequivalent allergen unit",
+    "symbol": "BAU",
+    "property": "amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [BAU] named bioequivalent allergen unit, symbol BAU, property amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[AU]",
+    "name": "allergen unit",
+    "symbol": "AU",
+    "property": "procedure defined amount of an allergen using some reference standard",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [AU] named allergen unit, symbol AU, property procedure defined amount of an allergen using some reference standard, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[Amb'a'1'U]",
+    "name": "allergen unit for Ambrosia artemisiifolia",
+    "symbol": "Amb a 1 U",
+    "property": "procedure defined amount of the major allergen of ragweed",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [Amb'a'1'U] named allergen unit for Ambrosia artemisiifolia, symbol Amb a 1 U, property procedure defined amount of the major allergen of ragweed, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[PNU]",
+    "name": "protein nitrogen unit",
+    "symbol": "PNU",
+    "property": "procedure defined amount of a protein substance",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [PNU] named protein nitrogen unit, symbol PNU, property procedure defined amount of a protein substance, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[Lf]",
+    "name": "Limit of flocculation",
+    "symbol": "Lf",
+    "property": "procedure defined amount of an antigen substance",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [Lf] named Limit of flocculation, symbol Lf, property procedure defined amount of an antigen substance, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[D'ag'U]",
+    "name": "D-antigen unit",
+    "symbol": "[D'ag'U]",
+    "property": "procedure defined amount of a poliomyelitis d-antigen substance",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [D'ag'U] named D-antigen unit, symbol [D'ag'U], property procedure defined amount of a poliomyelitis d-antigen substance, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[FEU]",
+    "name": "fibrinogen equivalent unit",
+    "symbol": "[FEU]",
+    "property": "amount of fibrinogen broken down into the measured d-dimers",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [FEU] named fibrinogen equivalent unit, symbol [FEU], property amount of fibrinogen broken down into the measured d-dimers, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[ELU]",
+    "name": "ELISA unit",
+    "symbol": "[ELU]",
+    "property": "arbitrary ELISA unit",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [ELU] named ELISA unit, symbol [ELU], property arbitrary ELISA unit, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[EU]",
+    "name": "Ehrlich unit",
+    "symbol": "[EU]",
+    "property": "Ehrlich unit",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [EU] named Ehrlich unit, symbol [EU], property Ehrlich unit, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Np",
+    "name": "neper",
+    "symbol": "Np",
+    "property": "level",
+    "ref_unit": "ln(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit Np named neper, symbol Np, property level, reference unit ln(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B",
+    "name": "bel",
+    "symbol": "B",
+    "property": "level",
+    "ref_unit": "lg(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit B named bel, symbol B, property level, reference unit lg(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[SPL]",
+    "name": "bel sound pressure",
+    "symbol": "B(SPL)",
+    "property": "pressure level",
+    "ref_unit": "2lg(2 10*-5.Pa)",
+    "ref_value": "",
+    "text": "UCUM unit B[SPL] named bel sound pressure, symbol B(SPL), property pressure level, reference unit 2lg(2 10*-5.Pa), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[V]",
+    "name": "bel volt",
+    "symbol": "B(V)",
+    "property": "electric potential level",
+    "ref_unit": "2lg(1 V)",
+    "ref_value": "",
+    "text": "UCUM unit B[V] named bel volt, symbol B(V), property electric potential level, reference unit 2lg(1 V), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[mV]",
+    "name": "bel millivolt",
+    "symbol": "B(mV)",
+    "property": "electric potential level",
+    "ref_unit": "2lg(1 mV)",
+    "ref_value": "",
+    "text": "UCUM unit B[mV] named bel millivolt, symbol B(mV), property electric potential level, reference unit 2lg(1 mV), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[uV]",
+    "name": "bel microvolt",
+    "symbol": "B(μV)",
+    "property": "electric potential level",
+    "ref_unit": "2lg(1 uV)",
+    "ref_value": "",
+    "text": "UCUM unit B[uV] named bel microvolt, symbol B(μV), property electric potential level, reference unit 2lg(1 uV), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[10.nV]",
+    "name": "bel 10 nanovolt",
+    "symbol": "B(10 nV)",
+    "property": "electric potential level",
+    "ref_unit": "2lg(10 nV)",
+    "ref_value": "",
+    "text": "UCUM unit B[10.nV] named bel 10 nanovolt, symbol B(10 nV), property electric potential level, reference unit 2lg(10 nV), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[W]",
+    "name": "bel watt",
+    "symbol": "B(W)",
+    "property": "power level",
+    "ref_unit": "lg(1 W)",
+    "ref_value": "",
+    "text": "UCUM unit B[W] named bel watt, symbol B(W), property power level, reference unit lg(1 W), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "B[kW]",
+    "name": "bel kilowatt",
+    "symbol": "B(kW)",
+    "property": "power level",
+    "ref_unit": "lg(1 kW)",
+    "ref_value": "",
+    "text": "UCUM unit B[kW] named bel kilowatt, symbol B(kW), property power level, reference unit lg(1 kW), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "st",
+    "name": "stere",
+    "symbol": "st",
+    "property": "volume",
+    "ref_unit": "m3",
+    "ref_value": "1",
+    "text": "UCUM unit st named stere, symbol st, property volume, reference unit m3, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "Ao",
+    "name": "Ångström",
+    "symbol": "Å",
+    "property": "length",
+    "ref_unit": "nm",
+    "ref_value": "0.1",
+    "text": "UCUM unit Ao named Ångström, symbol Å, property length, reference unit nm, reference value 0.1"
+  },
+  {
+    "kind": "unit",
+    "code": "b",
+    "name": "barn",
+    "symbol": "b",
+    "property": "action area",
+    "ref_unit": "fm2",
+    "ref_value": "100",
+    "text": "UCUM unit b named barn, symbol b, property action area, reference unit fm2, reference value 100"
+  },
+  {
+    "kind": "unit",
+    "code": "att",
+    "name": "technical atmosphere",
+    "symbol": "at",
+    "property": "pressure",
+    "ref_unit": "kgf/cm2",
+    "ref_value": "1",
+    "text": "UCUM unit att named technical atmosphere, symbol at, property pressure, reference unit kgf/cm2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "mho",
+    "name": "mho",
+    "symbol": "mho",
+    "property": "electric conductance",
+    "ref_unit": "S",
+    "ref_value": "1",
+    "text": "UCUM unit mho named mho, symbol mho, property electric conductance, reference unit S, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[psi]",
+    "name": "pound per square inch",
+    "symbol": "psi",
+    "property": "pressure",
+    "ref_unit": "[lbf_av]/[in_i]2",
+    "ref_value": "1",
+    "text": "UCUM unit [psi] named pound per square inch, symbol psi, property pressure, reference unit [lbf_av]/[in_i]2, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "circ",
+    "name": "circle",
+    "symbol": "circ",
+    "property": "plane angle",
+    "ref_unit": "[pi].rad",
+    "ref_value": "2",
+    "text": "UCUM unit circ named circle, symbol circ, property plane angle, reference unit [pi].rad, reference value 2"
+  },
+  {
+    "kind": "unit",
+    "code": "sph",
+    "name": "sphere",
+    "symbol": "sph",
+    "property": "solid angle",
+    "ref_unit": "[pi].sr",
+    "ref_value": "4",
+    "text": "UCUM unit sph named sphere, symbol sph, property solid angle, reference unit [pi].sr, reference value 4"
+  },
+  {
+    "kind": "unit",
+    "code": "[car_m]",
+    "name": "metric carat",
+    "symbol": "ct",
+    "property": "mass",
+    "ref_unit": "g",
+    "ref_value": "2e-1",
+    "text": "UCUM unit [car_m] named metric carat, symbol ct, property mass, reference unit g, reference value 2e-1"
+  },
+  {
+    "kind": "unit",
+    "code": "[car_Au]",
+    "name": "carat of gold alloys",
+    "symbol": "ct",
+    "property": "mass fraction",
+    "ref_unit": "/24",
+    "ref_value": "1",
+    "text": "UCUM unit [car_Au] named carat of gold alloys, symbol ct, property mass fraction, reference unit /24, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[smoot]",
+    "name": "Smoot",
+    "symbol": "[smoot]",
+    "property": "length",
+    "ref_unit": "[in_i]",
+    "ref_value": "67",
+    "text": "UCUM unit [smoot] named Smoot, symbol [smoot], property length, reference unit [in_i], reference value 67"
+  },
+  {
+    "kind": "unit",
+    "code": "[m/s2/Hz^(1/2)]",
+    "name": "meter per square seconds per square root of hertz",
+    "symbol": "[m/s2/Hz^(1/2)]",
+    "property": "amplitude spectral density",
+    "ref_unit": "sqrt(1 m2/s4/Hz)",
+    "ref_value": "",
+    "text": "UCUM unit [m/s2/Hz^(1/2)] named meter per square seconds per square root of hertz, symbol [m/s2/Hz^(1/2)], property amplitude spectral density, reference unit sqrt(1 m2/s4/Hz), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "[NTU]",
+    "name": "Nephelometric Turbidity Unit",
+    "symbol": "[NTU]",
+    "property": "turbidity",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [NTU] named Nephelometric Turbidity Unit, symbol [NTU], property turbidity, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "[FNU]",
+    "name": "Formazin Nephelometric Unit",
+    "symbol": "[FNU]",
+    "property": "turbidity",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit [FNU] named Formazin Nephelometric Unit, symbol [FNU], property turbidity, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "bit_s",
+    "name": "bit",
+    "symbol": "bit",
+    "property": "amount of information",
+    "ref_unit": "ld(1 1)",
+    "ref_value": "",
+    "text": "UCUM unit bit_s named bit, symbol bit, property amount of information, reference unit ld(1 1), reference value "
+  },
+  {
+    "kind": "unit",
+    "code": "bit",
+    "name": "bit",
+    "symbol": "bit",
+    "property": "amount of information",
+    "ref_unit": "1",
+    "ref_value": "1",
+    "text": "UCUM unit bit named bit, symbol bit, property amount of information, reference unit 1, reference value 1"
+  },
+  {
+    "kind": "unit",
+    "code": "By",
+    "name": "byte",
+    "symbol": "B",
+    "property": "amount of information",
+    "ref_unit": "bit",
+    "ref_value": "8",
+    "text": "UCUM unit By named byte, symbol B, property amount of information, reference unit bit, reference value 8"
+  },
+  {
+    "kind": "unit",
+    "code": "Bd",
+    "name": "baud",
+    "symbol": "Bd",
+    "property": "signal transmission rate",
+    "ref_unit": "/s",
+    "ref_value": "1",
+    "text": "UCUM unit Bd named baud, symbol Bd, property signal transmission rate, reference unit /s, reference value 1"
+  },
+  {
+    "kind": "prefix",
+    "code": "Ki",
+    "name": "kibi",
+    "symbol": "Ki",
+    "factor": 1024.0,
+    "text": "UCUM prefix Ki (Ki) means kibi and equals 1024.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "Mi",
+    "name": "mebi",
+    "symbol": "Mi",
+    "factor": 1048576.0,
+    "text": "UCUM prefix Mi (Mi) means mebi and equals 1048576.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "Gi",
+    "name": "gibi",
+    "symbol": "Gi",
+    "factor": 1073741824.0,
+    "text": "UCUM prefix Gi (Gi) means gibi and equals 1073741824.0"
+  },
+  {
+    "kind": "prefix",
+    "code": "Ti",
+    "name": "tebi",
+    "symbol": "Ti",
+    "factor": 1099511627776.0,
+    "text": "UCUM prefix Ti (Ti) means tebi and equals 1099511627776.0"
+  }
+]

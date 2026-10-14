@@ -1,0 +1,30 @@
+product: albumin
+
+tests:
+
+  단백질함량시험:
+    type: numeric
+    unit: "%"
+    comparator: ">="
+    description: "기준 이상이면 적합"
+
+  순도시험:
+    type: numeric
+    unit: "%"
+    comparator: ">="
+    description: "높을수록 적합"
+
+  불용성이물시험:
+    type: numeric
+    unit: "mg/mL"
+    comparator: "<="
+    description: "기준 이하이면 적합"
+
+  외관시험:
+    type: text
+    pass_keywords:
+      - 적합
+      - 이상 없음
+
+rules:
+  prefer_text_result: true

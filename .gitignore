@@ -1,0 +1,51 @@
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.pyc
+
+.venv/
+venv/
+
+.DS_Store
+.idea/
+.vscode/
+
+.streamlit/secrets.toml
+
+*.log
+dist/
+build/
+.local_validation/
+tmp/
+# Approved synthetic documents are versioned in 더미데이터/.
+# User submissions, mail indexes, rendered copies and judgement caches stay local.
+incoming_sp_pdfs/
+.sp_judgement_status/
+static/pdf_view/
+.pytest_cache/
+.runtime/
+.coverage
+htmlcov/
+outputs/*
+!outputs/README.md
+WORK_STATUS.md
+
+OUTPUT/*
+!OUTPUT/README.md
+
+# Generated judgement artifacts; retain only source fixtures in the repository.
+/summary_before.csv
+/summary_after.csv
+/summary.csv
+/tests/fixtures/historical/integrated_offline/
+/tests/fixtures/historical/live/
+/tests/fixtures/historical/corpus/D0[1-9].records.json
+/tests/fixtures/historical/corpus/D1[0-2].records.json
+
+# Local/reference copies not approved for publication. Keep files on this PC.
+/rag_data/20260622_145435_스카이코비원멀티주_허가서검증 가라본 (1).pdf
+/rag_data/EP/
+/더미데이터/최신 기준 SP 폼.pdf
+/example.pptx

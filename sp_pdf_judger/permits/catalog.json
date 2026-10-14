@@ -1,0 +1,16 @@
+{
+  "permits": [
+    {
+      "policy_id": "sk_bioscience_sky_covione_multidose",
+      "companies": ["SK바이오사이언스", "에스케이바이오사이언스", "SK bioscience"],
+      "products": ["스카이코비원멀티주", "스카이코비원", "SKYCovione"],
+      "path": "permits/documents/sky_covione_multidose.pdf",
+      "sha256": "c430105ce6c9bd0d9ef652912439735aa4bc01b86d94d74b97f745166fb56ea1",
+      "authoritative": true,
+      "ignore_section_numbers": true,
+      "require_llm": true,
+      "ocr_mode": "auto",
+      "evaluation_mode": "deterministic_first"
+    }
+  ]
+}

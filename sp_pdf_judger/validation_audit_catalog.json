@@ -1,0 +1,276 @@
+{
+  "catalog_version": "1.0",
+  "audited_at": "2026-09-06",
+  "scope": "historical_snapshot",
+  "code_reference_revision": "db045c5",
+  "current_scope_document": "docs/VALIDATION_SCOPE.md",
+  "scope_note": "이 카탈로그는 기존 커밋의 2026-09-06 감사 기록이다. 코드 근거 경로는 해당 커밋 기준이며 현재 MD 규칙의 구현/검증 범위를 뜻하지 않는다. 최신 상태는 current_scope_document를 따른다.",
+  "status_definition": {
+    "구현": "요구사항을 직접 판정하는 실행 로직과 결과 출력 경로가 코드에 존재함",
+    "부분 구현": "추출 또는 일부 하위 조건은 구현됐지만 요구사항 전체를 독립적으로 판정하지 못함",
+    "미구현": "요구사항을 판정하는 실행 로직을 코드에서 확인하지 못함"
+  },
+  "rules": [
+    {
+      "rule_id": "A.1",
+      "category": "A. 구조적 정합성",
+      "requirement": "최신 허가사항이 반영된 SP 문서 버전(4.3)과 회사 제출 SP 문서 버전(4.2)을 비교한다.",
+      "implementation_status": "부분 구현",
+      "executor": "Streamlit 버전 게이트",
+      "code_evidence": ["sp_app.py::_version_gate", "sp_app.py::TARGET_REFERENCE_VERSION"],
+      "audit_note": "제출 문서 버전 추출과 표시 비교는 있으나 기준이 4.3 허가본 연계가 아니라 4.0 상수이며 제품별 예외가 존재한다."
+    },
+    {
+      "rule_id": "A.2",
+      "category": "A. 구조적 정합성",
+      "requirement": "학습된 SP 포맷과 제출 문서의 전체적인 포맷 일치도를 검토한다.",
+      "implementation_status": "미구현",
+      "executor": "없음",
+      "code_evidence": ["sp_pdf_judger/domain_details/overall.md::문서 구조와 추적성"],
+      "audit_note": "지침 문구는 있으나 레이아웃 특징을 산출하고 기준본과 유사도를 판정하는 실행기가 없다."
+    },
+    {
+      "rule_id": "A.3",
+      "category": "A. 구조적 정합성",
+      "requirement": "문서 버전 아래 날짜를 인식하여 기준 문서 날짜와 일치하는지 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "JSON 추출기",
+      "code_evidence": ["json추출.py::version_date 추출", "sp_app.py::_version_gate"],
+      "audit_note": "version_date는 추출하지만 기준 날짜와 비교해 별도 판정하는 로직은 없다."
+    },
+    {
+      "rule_id": "A.4",
+      "category": "A. 구조적 정합성",
+      "requirement": "페이지 번호와 목차 번호의 순서, 각 시험과 표의 연결 관계를 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "페이지 연속성 검사 및 표 일반화기",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_build_page_continuity_evaluation", "sp_pdf_judger/sp_table_result_generalizer.py::expand_table_records_for_judgement"],
+      "audit_note": "페이지 순서는 판정하지만 목차 번호 순서와 시험-표 연결을 한 묶음으로 검증하는 전용 판정은 없다."
+    },
+    {
+      "rule_id": "A.5",
+      "category": "A. 구조적 정합성",
+      "requirement": "문서 중간 한 장 누락을 인쇄된 현재/전체 페이지 번호를 기준으로 판별한다.",
+      "implementation_status": "구현",
+      "executor": "페이지 연속성 검사",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_build_page_continuity_evaluation", "sp_pdf_judger/pipeline.py::_build_structural_consistency_evaluations"],
+      "audit_note": "번호 없는 표지는 제외하고 1/N부터 N/N까지 연속성과 표시 전체 페이지 수를 검사한다."
+    },
+    {
+      "rule_id": "A.6",
+      "category": "A. 구조적 정합성",
+      "requirement": "제조공정 또는 최종원액 공정 누락과 최종원액 무균시험 항목 누락을 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "제조요약도 공정 커버리지 검사",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_build_process_item_coverage_evaluation", "sp_pdf_judger/manufacturing_info_validator.py::collect_manufacturing_info_occurrences"],
+      "audit_note": "요약도의 제조단계가 상세 제조기록에 존재하는지는 검사하지만 단계 아래 필수 시험 목록, 특히 최종원액 무균시험 1건 누락까지는 직접 대조하지 않는다."
+    },
+    {
+      "rule_id": "A.7",
+      "category": "A. 구조적 정합성",
+      "requirement": "IU/mL, CoV, RBD PAb, 생기일반, 생기각조를 올바른 단위·바이러스 항목·약어로 인식한다.",
+      "implementation_status": "부분 구현",
+      "executor": "단위 정규화기 및 RAG",
+      "code_evidence": ["sp_pdf_judger/unit_normalizer.py", "sp_pdf_judger/rag.py", "sp_pdf_judger/domain_details/overall.md"],
+      "audit_note": "IU/mL 등 단위 정규화는 있으나 열거된 바이러스명과 약어 전부를 대상으로 한 독립 정확성 검사는 없다."
+    },
+    {
+      "rule_id": "A.8",
+      "category": "A. 구조적 정합성",
+      "requirement": "제조요약도 정보를 추출하여 본문의 해당 제조단계 항목과 비교한다.",
+      "implementation_status": "구현",
+      "executor": "제조정보 정합성 검사",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::extract_summary_items_from_records", "sp_pdf_judger/manufacturing_info_validator.py::validate_manufacturing_info_consistency"],
+      "audit_note": "제조번호, 제조년월일, 제조량을 단계별로 수집해 요약도와 본문 occurrence를 비교한다."
+    },
+    {
+      "rule_id": "A.9",
+      "category": "A. 구조적 정합성",
+      "requirement": "완제의약품 제조년월일을 다른 날짜 항목으로 대체 추출하지 않는다.",
+      "implementation_status": "구현",
+      "executor": "제조정보 정합성 검사",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::_record_candidate_sections", "sp_pdf_judger/manufacturing_info_validator.py::_extract_finished_product_from_summary_info"],
+      "audit_note": "완제 1.1 정보와 최종원액 4.1 정보를 우선하며 사용된 최종원액 번호 등 혼동 가능한 구간을 제외한다."
+    },
+    {
+      "rule_id": "A.10",
+      "category": "A. 구조적 정합성",
+      "requirement": "시험방법에는 시험법 내용을, 시험결과에는 수치·정성 결과를 올바르게 추출한다.",
+      "implementation_status": "부분 구현",
+      "executor": "JSON 추출기 및 계층화기",
+      "code_evidence": ["json추출.py", "sp_pdf_judger/hierarchy.py", "sp_pdf_judger/sp_table_result_generalizer.py"],
+      "audit_note": "필드 분리와 후처리는 있으나 잘못된 필드 배치를 탐지해 별도 판정하는 품질 검사는 없다."
+    },
+    {
+      "rule_id": "A.11",
+      "category": "A. 구조적 정합성",
+      "requirement": "표의 각 시험기준과 시험결과 값을 정상적으로 연결해 추출한다.",
+      "implementation_status": "구현",
+      "executor": "시험결과 표 일반화기",
+      "code_evidence": ["sp_pdf_judger/sp_table_result_generalizer.py::expand_table_records_for_judgement", "tests/test_table_and_semantic_judgement.py"],
+      "audit_note": "가로형·세로형·전치형 표를 개별 시험 레코드로 일반화하고 표 행별 판정을 지원한다."
+    },
+    {
+      "rule_id": "A.12",
+      "category": "A. 구조적 정합성",
+      "requirement": "한 개 시험이 두 번 인식되거나 중복 집계되지 않도록 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "시험결과 표 일반화기",
+      "code_evidence": ["sp_pdf_judger/sp_table_result_generalizer.py::expand_table_records_for_judgement", "sp_pdf_judger/judgement.py::중복 제거"],
+      "audit_note": "표 원본 레코드의 이중 판정은 막지만 문서 전체에서 동일 시험 중복 추출을 탐지해 알리는 전용 검사는 없다."
+    },
+    {
+      "rule_id": "A.13",
+      "category": "A. 구조적 정합성",
+      "requirement": "충족·불충족·보류 판정의 기준과 결과를 클릭해 근거 위치 및 판정 사유를 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "판정 UI 및 제조정보 앵커",
+      "code_evidence": ["sp_pdf_judger/ui_html.py", "sp_pdf_judger/manufacturing_info_validator.py::_scroll_attrs", "tests/test_rendered_stage_detail_has_stable_click_anchor_and_reason"],
+      "audit_note": "판정 사유와 일부 제조정보 앵커 이동은 있으나 모든 시험의 기준·결과를 원문 위치로 이동시키는 일관된 링크 계약은 없다."
+    },
+    {
+      "rule_id": "B.1",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "1.3 IU/mL 같은 수치 기준에서 단위와 비교 연산자를 함께 적용해 판정한다.",
+      "implementation_status": "구현",
+      "executor": "결정론적 시험 판정기",
+      "code_evidence": ["sp_pdf_judger/criteria_parser.py", "sp_pdf_judger/judgement.py::deterministic_judge", "sp_pdf_judger/unit_normalizer.py"],
+      "audit_note": "이상·이하·초과·미만과 기호 연산자를 파싱하고 정규화한 단위를 함께 비교한다."
+    },
+    {
+      "rule_id": "B.2",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "7.0~8.0 같은 범위 기준의 하한과 상한을 적용해 판정한다.",
+      "implementation_status": "구현",
+      "executor": "수치 기준 파서",
+      "code_evidence": ["sp_pdf_judger/criteria_parser.py::_parse_range", "sp_pdf_judger/judgement.py::deterministic_judge"],
+      "audit_note": "범위 표현을 하한·상한으로 변환해 결과의 범위 포함 여부를 검사한다."
+    },
+    {
+      "rule_id": "B.3",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "검출되지 않아야 함 기준에 대한 불검출, 검출되지 않음, X 등 동의 표현을 인식한다.",
+      "implementation_status": "구현",
+      "executor": "정성 결과 판정기",
+      "code_evidence": ["sp_pdf_judger/judgement.py::_judge_qualitative_text", "sp_pdf_judger/judgement.py::_judge_semantic_qualitative_text"],
+      "audit_note": "부정·불검출 표현군을 정규화해 정성 기준과 결과를 우선 판정한다."
+    },
+    {
+      "rule_id": "B.4",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "여러 조건이 결합된 기준을 조건별로 나누어 모두 만족하는지 판정한다.",
+      "implementation_status": "구현",
+      "executor": "복합 정성조건 판정기",
+      "code_evidence": ["sp_pdf_judger/judgement.py::_judge_compound_qualitative_requirements", "tests/test_compound_qualitative_requirement_is_decided_before_gemini"],
+      "audit_note": "복수 정성조건을 분리해 전체 충족 여부를 결정하며 일반시험법 우선 규칙도 적용된다."
+    },
+    {
+      "rule_id": "B.5",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "시험기준 수치와 시험결과 수치의 소수점 이하 자릿수 및 문서 내 표기 자릿수 통일성을 확인한다.",
+      "implementation_status": "구현",
+      "executor": "소수점 자릿수 검사",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_build_decimal_precision_pair_evaluation", "sp_pdf_judger/pipeline.py::_build_document_decimal_consistency_evaluation"],
+      "audit_note": "기준-결과 쌍과 동일 수치 문맥의 문서 전체 표기에서 소수점 이하 자릿수를 비교한다."
+    },
+    {
+      "rule_id": "B.6",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "신청제품정보와 본문의 동일 제조정보를 비교한다.",
+      "implementation_status": "구현",
+      "executor": "제조정보 정합성 검사",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::collect_manufacturing_info_occurrences", "tests/test_generalized_manufacturing_validation.py::test_finished_product_application_info_is_counted_as_document_source"],
+      "audit_note": "지원 필드인 제조번호·제조년월일·제조량 범위에서 1.1 신청제품정보를 본문 occurrence로 포함해 비교한다."
+    },
+    {
+      "rule_id": "B.7",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "제조년월일과 사용(유효)기간으로 최종 유효년월일을 계산해 신청제품정보와 비교한다.",
+      "implementation_status": "미구현",
+      "executor": "없음",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::validate_same_manufacturing_number_consistency"],
+      "audit_note": "동일 제조번호의 기재값 비교는 있으나 제조일에 기간을 더해 최종 유효일을 계산하는 로직은 없다."
+    },
+    {
+      "rule_id": "B.8",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "제조수량보다 최종 신청수량이 적을 때 손실·누락 사유가 있으면 허용한다.",
+      "implementation_status": "미구현",
+      "executor": "없음",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::_quantity_matches", "sp_pdf_judger/manufacturing_info_validator.py::_should_compare_occurrence_quantity"],
+      "audit_note": "수량 종류와 단위는 구분하지만 신청수량 감소 사유를 추출해 예외로 허용하는 판정은 없다."
+    },
+    {
+      "rule_id": "B.9",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "저장기간 시작일이 제조년월일과 같고 허가 저장기간으로 계산한 종료일이 정확한지 확인한다.",
+      "implementation_status": "미구현",
+      "executor": "없음",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::validate_same_manufacturing_number_consistency"],
+      "audit_note": "날짜와 기간의 반복 기재 일치 검사는 있으나 시작일 동일성 및 종료일 산술 계산은 없다."
+    },
+    {
+      "rule_id": "B.10",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "제조량, 사용량, 분량, 투입량을 구분하여 검증 대상 수량을 정확히 선택한다.",
+      "implementation_status": "구현",
+      "executor": "제조정보 수량 필드 선택기",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::_should_compare_occurrence_quantity", "tests/test_generalized_manufacturing_validation.py::test_storage_period_is_never_compared_as_manufacturing_quantity"],
+      "audit_note": "사용량·분량·원료완제품 등 비제조수량 출처를 제외하고 제조수량 후보만 비교한다."
+    },
+    {
+      "rule_id": "B.11",
+      "category": "B. 계산 및 수치 정합성",
+      "requirement": "허가사항 문서가 있으면 SP 시험기준의 단위와 수치가 허가사항 기준과 일치하는지 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "허가서 RAG 및 시험 판정기",
+      "code_evidence": ["sp_pdf_judger/judgement.py::PermitPdfStore", "sp_pdf_judger/judgement.py::허가서 직접 근거 판정", "sp_pdf_judger/permits/permit_rules.yaml"],
+      "audit_note": "허가서 근거를 우선해 개별 시험을 판정할 수 있으나 모든 SP 기준을 허가서 기준과 독립 전수 대조하는 검사는 아니다."
+    },
+    {
+      "rule_id": "C.1",
+      "category": "C. 공정 및 시간적 순서",
+      "requirement": "중간체 원액 시험일자가 나노파티클 원액 시험일자보다 늦지 않은지 확인한다.",
+      "implementation_status": "부분 구현",
+      "executor": "공정별 시험 허용구간 검사",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::validate_stage_test_date_ranges"],
+      "audit_note": "각 시험을 제조단계 기간 안에서 검사하지만 두 원액 시험일자를 명시적으로 서로 비교하는 제품 규칙은 없다."
+    },
+    {
+      "rule_id": "C.2",
+      "category": "C. 공정 및 시간적 순서",
+      "requirement": "완제품의 모든 시험 완료일 이후에 품질부서 책임자가 최종 서명했는지 확인한다.",
+      "implementation_status": "구현",
+      "executor": "최종 서명일 검사",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_build_final_signature_after_finished_tests_evaluation"],
+      "audit_note": "완제품 시험의 최종 완료일과 문서 확인·서명일을 비교해 시간 순서를 판정한다."
+    },
+    {
+      "rule_id": "C.3",
+      "category": "C. 공정 및 시간적 순서",
+      "requirement": "최종원액 저장기한 18개월 안에 완제품 제조 완료 시점이 포함되는지 확인한다.",
+      "implementation_status": "미구현",
+      "executor": "없음",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::validate_stage_test_date_ranges"],
+      "audit_note": "공정일 순서 검사는 있으나 최종원액 제조일에 18개월을 더해 완제품 완료일을 비교하는 로직은 없다."
+    },
+    {
+      "rule_id": "C.4",
+      "category": "C. 공정 및 시간적 순서",
+      "requirement": "각 공정 시험일자가 해당 공정 제조일자와 다음 공정 제조일자 사이인지 확인한다.",
+      "implementation_status": "구현",
+      "executor": "공정별 시험 허용구간 검사",
+      "code_evidence": ["sp_pdf_judger/manufacturing_info_validator.py::validate_stage_test_date_ranges", "tests/test_generalized_manufacturing_validation.py::test_uses_flowchart_edges_for_test_date_window"],
+      "audit_note": "현재 단계 제조일 이상, 다음 단계 제조일 미만의 구간으로 시험기간 전체를 검사한다."
+    },
+    {
+      "rule_id": "C.5",
+      "category": "C. 공정 및 시간적 순서",
+      "requirement": "병렬 공정의 각 분기 내부 순서와 합류 이후 공통 순서를 모두 확인한다.",
+      "implementation_status": "구현",
+      "executor": "제조요약도 순서 판정기",
+      "code_evidence": ["sp_pdf_judger/pipeline.py::_judge_manufacturing_summary_page", "sp_pdf_judger/manufacturing_stage_ui.py"],
+      "audit_note": "요약도 연결선과 그룹을 이용해 분기 내부 선후관계와 합류 이후 공통 단계 순서를 판정한다."
+    }
+  ]
+}
