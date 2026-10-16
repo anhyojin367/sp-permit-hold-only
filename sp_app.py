@@ -641,10 +641,12 @@ def _simulation_finish_delay_seconds(graph_json: str, permit_enabled: bool) -> f
 
 
 @st.fragment(run_every=1.0)
-def _render_pending_review(job):
+def _render_pending_review(job, *, rules_only=False):
     if job.future.done():
         st.rerun()
     message, elapsed = job.snapshot()
+    if rules_only:
+        message = f"SP 룰 전용 · 허가서 미검증 · {message}"
     st.markdown(
         f'<div class="sim-transition-notice">{_escape(message)}'
         f' · 경과 {int(elapsed)}초<br>실제 판정 처리 중입니다. 목록으로 이동해도 작업은 유지됩니다.</div>',
@@ -696,6 +698,9 @@ def _render_inline_simulation(product: str, pdf_path: Path | None = None) -> flo
     if selected_doc_for_judge is None:
         st.error("제출 문서 정보를 확인할 수 없어 검수를 중단했습니다.")
         return 0.0
+    if getattr(selected_doc_for_judge, "permit_link_error", ""):
+        st.error(selected_doc_for_judge.permit_link_error)
+        return 0.0
 
     permit_paths = []
 
@@ -736,7 +741,7 @@ def _render_inline_simulation(product: str, pdf_path: Path | None = None) -> flo
                 ),
             )
             if not job.future.done():
-                _render_pending_review(job)
+                _render_pending_review(job, rules_only=not permit_paths)
                 return -1.0
             artifacts = job.future.result()
         except Exception as exc:
@@ -791,7 +796,7 @@ def _cached_simulation_artifacts_for_doc(
     permit_paths: list[Path],
     csv_dir: Path,
 ) -> dict | None:
-    if doc is None:
+    if doc is None or getattr(doc, "permit_link_error", ""):
         return None
 
     record = _status_record_for_doc(doc, _load_judgement_status_index())
@@ -1499,7 +1504,12 @@ def _document_from_pdf_cached(
     title = _extract_title(text, filename, product)
     received_date = _extract_received_date(pdf)
     subject = _extract_subject_from_index(pdf)
-    permit_files = _related_permit_files(pdf)
+    permit_link_error = ""
+    try:
+        permit_files = _related_permit_files(pdf)
+    except PermitLinkError as exc:
+        permit_files = ()
+        permit_link_error = str(exc)
 
     return InboxDocument(
         path=pdf,
@@ -1513,6 +1523,7 @@ def _document_from_pdf_cached(
         source="직접 업로드" if _index_record(pdf).get("source") == "upload" else "Gmail",
         permit_files=permit_files,
         product_mapping_id=product_mapping_id,
+        permit_link_error=permit_link_error,
     )
 
 
@@ -1603,6 +1614,8 @@ def _summary_counts_from_csv(path: Path | None) -> dict[str, int] | None:
 
 
 def _status_record_for_doc(doc: InboxDocument, index: dict) -> dict | None:
+    if getattr(doc, "permit_link_error", ""):
+        return None
     from sp_pdf_judger.permit_semantic_settings import read_semantic_settings, semantic_cache_fingerprint
     from sp_pdf_judger.review_presentation import file_sha256
     from sp_pdf_judger.review_scope import current_permit_review_scope
@@ -1613,6 +1626,13 @@ def _status_record_for_doc(doc: InboxDocument, index: dict) -> dict | None:
     exact = docs.get(_pdf_status_key(doc.path))
     # Identically-sized files or similar names are not interchangeable submissions.
     if not isinstance(exact, dict) or exact.get("cache_version") != JUDGEMENT_STATUS_CACHE_VERSION:
+        return None
+    try:
+        linked_permits = _related_permit_files(doc.path)
+    except PermitLinkError:
+        return None
+    review_mode = "with_permit" if linked_permits else "sp_rules_only"
+    if exact.get("review_mode") != review_mode:
         return None
     if current_permit_review_scope() == 'hold_only':
         if exact.get('permit_review_scope') != 'hold_only':
@@ -1635,7 +1655,7 @@ def _status_record_for_doc(doc: InboxDocument, index: dict) -> dict | None:
     if semantic_settings.mode == 'shared_evidence' and exact.get('sp_sha256') != file_sha256(doc.path):
         return None
     current = resolve_submission_permits(
-        _related_permit_files(doc.path),
+        linked_permits,
         doc.company,
         doc.product,
         product_mapping_id=str(getattr(doc, "product_mapping_id", "") or ""),
@@ -1790,29 +1810,47 @@ def _is_permit_pdf(pdf: Path) -> bool:
     return any(token in name for token in ("허가서", "품목허가", "허가사항", "허가증", "permit", "approval", "license"))
 
 
+class PermitLinkError(ValueError):
+    """Invalid linkage is not permission to silently run a permit-free review."""
+
+
 def _related_permit_files(pdf: Path) -> tuple[Path, ...]:
     record = _index_record(pdf)
     index = _load_gmail_index(pdf.parent)
+    error = "허가서 연결 오류: 연결 정보를 확인한 뒤 허가서를 다시 추가·교체해 주세요."
+    files = index.get("files", {})
+    if not isinstance(files, dict):
+        raise PermitLinkError(error)
+
+    def linked_path(name):
+        # Reject unsafe names before resolving or accessing any outside path.
+        if (not isinstance(name, str) or not name.strip()
+                or name in {".", ".."} or any(char in name for char in ("/", "\\", ":", "\0"))
+                or Path(name).suffix.casefold() != ".pdf"):
+            raise PermitLinkError(error)
+        candidate = pdf.parent / name
+        if candidate.resolve().parent != pdf.parent.resolve():
+            raise PermitLinkError(error)
+        return candidate
 
     # 1순위: index에 명시된 related_permit_files만 사용
-    related_names = [str(name) for name in record.get("manual_permit_files", record.get("related_permit_files", [])) if name]
+    related_names = record.get("manual_permit_files", record.get("related_permit_files", []))
+    if not isinstance(related_names, (list, tuple)):
+        raise PermitLinkError(error)
     permits: list[Path] = []
 
     for name in related_names:
-        candidate = pdf.parent / name
-        other = index.get("files", {}).get(name, {})
-
-        if candidate.resolve().parent != pdf.parent.resolve() or not candidate.exists():
-            continue
-
-        if isinstance(other, dict):
-            attachment_type = str(other.get("attachment_type", "")).strip().casefold()
-            if attachment_type and attachment_type != "permit":
-                continue
+        candidate = linked_path(name)
+        other = files.get(name, {})
+        if not isinstance(other, dict):
+            raise PermitLinkError(error)
+        attachment_type = other.get("attachment_type", "")
+        if name in files and (not isinstance(attachment_type, str) or attachment_type.strip().casefold() != "permit"):
+            raise PermitLinkError(error)
 
         permits.append(candidate)
 
-    if permits or "manual_permit_files" in record:
+    if permits or "manual_permit_files" in record or related_names:
         return tuple(permits)
 
     # 2순위: 같은 message_id에 있는 permit만 연결
@@ -1822,22 +1860,24 @@ def _related_permit_files(pdf: Path) -> tuple[Path, ...]:
     if not message_id:
         return tuple()
 
-    for name, other in index.get("files", {}).items():
+    for name, other in files.items():
         if name == pdf.name or not isinstance(other, dict):
             continue
 
         if str(other.get("message_id", "") or "").strip() != message_id:
             continue
 
-        attachment_type = str(other.get("attachment_type", "")).strip().casefold()
+        attachment_type = other.get("attachment_type", "")
+        if not isinstance(attachment_type, str):
+            raise PermitLinkError(error)
+        attachment_type = attachment_type.strip().casefold()
 
-        if attachment_type != "permit":
+        if attachment_type == "sp":
             continue
+        if attachment_type != "permit":
+            raise PermitLinkError(error)
 
-        candidate = pdf.parent / str(name)
-
-        if candidate.exists():
-            permits.append(candidate)
+        permits.append(linked_path(name))
 
     return tuple(permits)
 
@@ -2387,8 +2427,10 @@ def _source_document_name(path: Path) -> str:
 
 
 def _permit_summary(doc: InboxDocument) -> str:
+    if getattr(doc, "permit_link_error", ""):
+        return doc.permit_link_error
     if not doc.permit_files:
-        return "없음"
+        return "SP 룰 전용 · 허가서 미검증"
     names = [_source_document_name(permit) for permit in doc.permit_files]
     if len(names) == 1:
         return f"{names[0]} 있음"
@@ -3028,7 +3070,7 @@ def _render_reference_panel(
             _render_reference_card(ref, selected_doc, gate)
 
     st.markdown('<div class="action-bar">', unsafe_allow_html=True)
-    can_continue = selected_doc is not None and (gate_context or _can_review_with_linked_permit(selected_doc, gate))
+    can_continue = _can_continue_review(selected_doc, gate_context, gate)
     if st.button("검수 진행", type="primary", use_container_width=True, disabled=not can_continue):
         if selected_doc is None:
             st.warning("검수할 제출 SP 문서를 먼저 선택해야 합니다.")
@@ -3053,9 +3095,18 @@ def _render_reference_panel(
     st.markdown("</div>", unsafe_allow_html=True)
 
 
+def _can_continue_review(doc, gate_context, gate) -> bool:
+    """An SP without permit/reference can still run its own deterministic rules."""
+    return bool(doc is not None and not getattr(doc, "permit_link_error", "") and (
+        not getattr(doc, "permit_files", ())
+        or gate_context
+        or _can_review_with_linked_permit(doc, gate)
+    ))
+
+
 def _can_review_with_linked_permit(doc, gate) -> bool:
     """A product mismatch is a review finding, not a reason to block its review."""
-    return bool(doc is not None and gate.get("matched") is None
+    return bool(doc is not None and not getattr(doc, "permit_link_error", "") and gate.get("matched") is None
                 and any(Path(path).is_file() for path in getattr(doc, "permit_files", ())))
 
 

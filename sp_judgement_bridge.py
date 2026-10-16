@@ -635,6 +635,7 @@ def _remember_judgement_artifacts(artifacts: dict[str, Any]) -> None:
 
     entry = {
         "status": "failed" if _has_runtime_llm_failure(artifacts) else "completed",
+        "review_mode": artifacts.get("review_mode"),
         "cache_version": JUDGEMENT_CACHE_VERSION,
         "artifact_key": artifact_key,
         "pdf_path": str(pdf_path),
@@ -1528,12 +1529,14 @@ def ensure_judgement_artifacts(
                     permit_resolution=permit_resolution, progress=progress,
                     _retry_failed=_retry_failed and not waited,
                     llm_execution_settings=execution_settings,
+                    rules_only=not permit_paths,
                     attempt_llm_fingerprint=execution_fingerprint, semantic_settings=semantic_settings)
         except ClovaServiceError as exc:
             # Keep failed requests separate from all actual judgement results.
             # No fake HOLD rows, summary CSV or completed pickle is published.
             _remember_service_failure(root_dir, key, pdf_path, exc,
-                permit_resolution, detail_profile, execution_fingerprint, semantic_settings)
+                permit_resolution, detail_profile, execution_fingerprint, semantic_settings,
+                review_mode="sp_rules_only" if not permit_paths else "with_permit")
             raise
 
 
@@ -1546,6 +1549,7 @@ def _remember_service_failure(
     details,
     execution_fingerprint=None,
     semantic_settings=None,
+    review_mode="with_permit",
 ):
     review_scope = current_permit_review_scope()
     path = root_dir / "service_failure.json"
@@ -1565,6 +1569,7 @@ def _remember_service_failure(
     stat = pdf_path.stat()
     _store_status_entry(pdf_path, {
         "status": "failed", "cache_version": JUDGEMENT_CACHE_VERSION,
+        "review_mode": review_mode,
         "permit_review_scope": review_scope,
         "sp_sha256": file_sha256(pdf_path) if review_scope == 'hold_only' else None,
         "permit_file_hashes": {
@@ -1615,7 +1620,7 @@ def _record_judgement_attempt(root_dir: Path, key: str, pdf_path: Path) -> None:
 def _ensure_disk_artifacts(*, key, root_dir, pdf_path, resolved_permit_paths,
         original_csv_dir, company, product, product_mapping_id, detail_profile, permit_resolution,
         progress, _retry_failed, llm_execution_settings,
-        attempt_llm_fingerprint, semantic_settings=None):
+        attempt_llm_fingerprint, semantic_settings=None, rules_only=False):
     """Caller must hold the artifact OS lock through publication/status writes."""
     review_scope = current_permit_review_scope()
     scope_kwargs = {'permit_review_scope': review_scope} if review_scope == 'hold_only' else {}
@@ -1719,13 +1724,14 @@ def _ensure_disk_artifacts(*, key, root_dir, pdf_path, resolved_permit_paths,
 
     _record_judgement_attempt(root_dir, key, pdf_path)
     with nullcontext():
-        progress("SP 문서 추출 및 문서 기준 판정 준비")
+        progress("SP 룰 전용 · 허가서 미검증" if rules_only else "SP 문서 추출 및 문서 기준 판정 준비")
         before_pipeline = DocumentJudgePipeline(
             permit_pdf_paths=[],
             company=company,
             product=product,
             permit_resolution=permit_resolution,
             permit_enabled=False,
+            **({"rules_only": True} if rules_only else {}),
             llm_execution_settings=llm_execution_settings,
             **semantic_kwargs,
             **scope_kwargs,
@@ -1740,14 +1746,16 @@ def _ensure_disk_artifacts(*, key, root_dir, pdf_path, resolved_permit_paths,
             pdf_path,
             # Keep the SP baseline and document policies; do not pay for a row
             # semantic verdict that the authoritative grouped pass will replace.
-            primary_tests_only=grouped_authority,
+            primary_tests_only=rules_only or grouped_authority,
             progress_callback=lambda message: progress("SP: " + message),
         )
 
         if current_permit_review_scope() != review_scope:
             raise JudgementCacheError('검수 중 허가서 적용 범위가 바뀌어 허가서 대조를 시작하지 않았습니다.')
 
-        if review_scope == 'hold_only':
+        if rules_only:
+            after_result = before_result
+        elif review_scope == 'hold_only':
             from sp_pdf_judger.hold_only_review import apply_held_permit_review
             after_result = apply_held_permit_review(before_result,
                 pipeline_factory=lambda: DocumentJudgePipeline(
@@ -1817,6 +1825,7 @@ def _ensure_disk_artifacts(*, key, root_dir, pdf_path, resolved_permit_paths,
 
     artifacts = {
         "artifact_key": key,
+        "review_mode": "sp_rules_only" if rules_only else "with_permit",
         "cache_version": JUDGEMENT_CACHE_VERSION,
         "root_dir": root_dir,
         "before_result": before_result,
@@ -2496,6 +2505,9 @@ def render_final_judgement_page(
     if selected_doc is None:
         st.error("최종 판정에 사용할 SP 문서를 찾지 못했습니다.")
         return
+    if getattr(selected_doc, "permit_link_error", ""):
+        st.error(selected_doc.permit_link_error)
+        return
 
     pdf_path = Path(selected_doc.path)
 
@@ -2591,7 +2603,7 @@ def render_final_judgement_page(
     doc_version = str(getattr(selected_doc, "version", "버전 정보 없음") or "버전 정보 없음")
     received_date = str(getattr(selected_doc, "received_date", "접수일 정보 없음") or "접수일 정보 없음")
     product_number = str(getattr(selected_doc, "product_number", "식별번호 없음") or "식별번호 없음")
-    permit_state = f"허가서 {len(permit_paths)}건 연계" if permit_paths else "허가서 미연계"
+    permit_state = f"허가서 {len(permit_paths)}건 연계" if permit_paths else "SP 룰 전용 · 허가서 미검증"
 
     # 판정 결과 총합을 CSV 단일 출처에서 읽어 Gmail·시뮬레이션 섹션과 일치시킨다.
     _summary_after_path = Path(artifacts.get("summary_after_path") or "")
@@ -2629,7 +2641,7 @@ def render_final_judgement_page(
     permit_status_html = (
         f'<div class="final-permit-status applied">허가서 PDF 적용됨 · {html.escape(", ".join(path.name for path in permit_paths))}</div>'
         if permit_paths
-        else '<div class="final-permit-status missing">허가서 PDF 미적용</div>'
+        else '<div class="final-permit-status missing">SP 룰 전용 · 허가서 미검증</div>'
     )
 
     # 제조요약도 기준 CSV 다운로드 버튼과 내부 판정 호출 통계는 최종 판정 화면에 표시하지 않는다.

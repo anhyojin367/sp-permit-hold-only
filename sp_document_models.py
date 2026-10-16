@@ -16,6 +16,7 @@ class InboxDocument:
     source: str = "Gmail"
     permit_files: tuple[Path, ...] = ()
     product_mapping_id: str = ""
+    permit_link_error: str = ""
 
 
 @dataclass(frozen=True)

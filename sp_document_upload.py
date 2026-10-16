@@ -158,7 +158,13 @@ def render_upload_dialog(store: Path, documents: list, on_saved) -> None:
         if permit_files:
             names = ", ".join(f.name for f in permit_files)
             st.caption(f"연결할 허가서: {names}")
-        confirmed = st.checkbox("선택한 SP와 허가서의 제품 및 연결 관계를 확인했습니다.")
+        confirmation = (
+            "선택한 SP와 허가서의 제품 및 연결 관계를 확인했습니다."
+            if permit_files else "선택한 SP 문서를 확인했습니다."
+        )
+        if target is None and not permit_files:
+            st.caption("SP 룰 전용 · 허가서 미검증 — 허가서를 첨부하지 않으면 SP 자체 규칙만 검수합니다.")
+        confirmed = st.checkbox(confirmation)
         if st.button("등록", type="primary", disabled=not confirmed):
             try:
                 uploaded_permits = [(f.name, f.getvalue()) for f in permit_files]
